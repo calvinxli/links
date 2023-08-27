@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     output: 'export',
-    basePath: 'https://calvinxli.github.io/links',
+    basePath: 'links',
 }
 
 module.exports = nextConfig
