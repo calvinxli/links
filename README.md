@@ -11,9 +11,11 @@ npx create-next-app@latest
 6. (Optional) Add a [`LICENSE`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) and/or `README.md` to your repo
 7. Install `git` following these [`instructions`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 8. Create your public GitHub repository and import your local code following [`this guide`](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
-9. Enable GitHub Pages on your repo and setup GitHub Action following [`this`](https://github.com/gregrickaby/nextjs-github-pages#configure-github-repository)
+9. Navigate to your repository's `Settings -> Pages -> Build and deployment -> Source` and choose `GitHub Actions` from the dropdown
+10. Click the `Configure` button under the `Next.js` card and commit the file it generates
 
-Each push to `main` branch should trigger a deployment of the page
+Each push to `main` branch should trigger a deployment of the page which will be available at `https://your-github-name.github.io/your-repo-name`. The link should also be available at `Settings -> Pages` once the site is live.
+Check the `Actions` tab on your repo for deployment status. 
 ___________________
 ## Getting Started
 
