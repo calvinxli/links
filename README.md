@@ -1,12 +1,13 @@
 ## Setting Up From Scratch
 1. Install [`node.js`](https://nodejs.org/en/download/current).
-2. Bootstrap the project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), 
+2. Bootstrap the project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [`antd`](https://ant.design/docs/react/use-with-next), 
 ```
 # choose typescipt and default options
 npx create-next-app@latest
+npm install antd --save
 ```
 3. Create/edit your `next.config.js` file (you can just copy mine but change `basePath` to match your repo's name - reference [`nextjs-github-pages`](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
-4. Place a `.nojekyll` file in `/public` - reference [`nextjs-github-pages`]([https://github.com/gregrickaby/nextjs-github-pages](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
+4. Place a `.nojekyll` file in `/public` - reference [`nextjs-github-pages`](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
 5. Remove `/` prefix from the `src` attribute of the `Image` elements in `page.tsx`
 6. (Optional) Add a [`LICENSE`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) and/or `README.md` to your repo
 7. Install `git` following these [`instructions`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
