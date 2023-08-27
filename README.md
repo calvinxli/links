@@ -14,6 +14,8 @@ npx create-next-app@latest
 9. Navigate to your repository's `Settings -> Pages -> Build and deployment -> Source` and choose `GitHub Actions` from the dropdown
 10. Click the `Configure` button under the `Next.js` card and commit the file it generates
 
+Or... you can just fork this thing and update it.
+
 Each push to `main` branch should trigger a deployment of the page which will be available at `https://your-github-name.github.io/your-repo-name`. The link should also be available at `Settings -> Pages` once the site is live.
 Check the `Actions` tab on your repo for deployment status. 
 ___________________
