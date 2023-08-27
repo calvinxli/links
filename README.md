@@ -1,8 +1,8 @@
 ## Setting Up From Scratch
 1. Install [`node.js`](https://nodejs.org/en/download/current).
-2. Bootstrap the project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), choose typescipt and default options
+2. Bootstrap the project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), 
 ```
-# tl;dr
+# choose typescipt and default options
 npx create-next-app@latest
 ```
 3. Create/edit your `next.config.js` file (you can just copy mine but change `basePath` to match your repo's name - reference [`nextjs-github-pages`](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
