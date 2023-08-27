@@ -1,5 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Setting Up From Scratch
+1. Install [`node.js`](https://nodejs.org/en/download/current).
+2. Bootstrap the project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), 
+```
+# choose typescipt and default options
+npx create-next-app@latest
+```
+3. Create/edit your `next.config.js` file (you can just copy mine but change `basePath` to match your repo's name - reference [`nextjs-github-pages`](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
+4. Place a `.nojekyll` file in `/public` - reference [`nextjs-github-pages`]([https://github.com/gregrickaby/nextjs-github-pages](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
+5. Remove `/` prefix from the `src` attribute of the `Image` elements in `page.tsx`
+6. (Optional) Add a [`LICENSE`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) and/or `README.md` to your repo
+7. Install `git` following these [`instructions`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+8. Create your public GitHub repository and import your local code following [`this guide`](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+9. Navigate to your repository's `Settings -> Pages -> Build and deployment -> Source` and choose `GitHub Actions` from the dropdown
+10. Click the `Configure` button under the `Next.js` card and commit the file it generates
 
+Or... you can just fork this thing and update it.
+
+Each push to `main` branch should trigger a deployment of the page which will be available at `https://your-github-name.github.io/your-repo-name`. The link should also be available at `Settings -> Pages` once the site is live.
+Check the `Actions` tab on your repo for deployment status. 
+___________________
 ## Getting Started
 
 First, run the development server:
