@@ -7,13 +7,17 @@ npx create-next-app@latest
 npm install antd --save
 npm install @ant-design/cssinjs --save
 ```
-3. Finish the steps in [`Using Next.js App Router`](https://ant.design/docs/react/use-with-next#using-nextjs-app-router)
-4. Follow the steps in the `Configure Next.js` section of [`nextjs-github-pages`](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
-5. (Optional) Add a [`LICENSE`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) and/or `README.md` to the repo
-6. Install `git` following these [`instructions`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-7. Create public GitHub repository and import local code following [`this guide`](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
-8. Navigate to repository's `Settings -> Pages -> Build and deployment -> Source` and choose `GitHub Actions` from the dropdown
-9. Click the `Configure` button under the `Next.js` card and commit the file it generates
+3. Uninstall `tailwindcss` and remove all tailwind references in the code
+```
+npm uninstall tailwindcss
+```
+4. Finish the steps in [`Using Next.js App Router`](https://ant.design/docs/react/use-with-next#using-nextjs-app-router)
+5. Follow the steps in the `Configure Next.js` section of [`nextjs-github-pages`](https://github.com/gregrickaby/nextjs-github-pages#configure-nextjs)
+6. (Optional) Add a [`LICENSE`](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) and/or `README.md` to the repo
+7. Install `git` following these [`instructions`](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+8. Create public GitHub repository and import local code following [`this guide`](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+9. Navigate to repository's `Settings -> Pages -> Build and deployment -> Source` and choose `GitHub Actions` from the dropdown
+10. Click the `Configure` button under the `Next.js` card and commit the file it generates
 
 Each push to `main` branch should trigger a deployment of the page which will be available at `https://github-username.github.io/repo-name`. The link should also be available at `Settings -> Pages` once the site is live.
 Check the `Actions` tab on the repo for deployment status. 
