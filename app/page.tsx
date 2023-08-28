@@ -1,19 +1,19 @@
+'use client'
 import React from 'react';
-import { Button, Space } from 'antd';
-import Image from 'next/image';
+import { Button, Space, Image, Typography } from 'antd';
+const { Text, Link } = Typography;
 
 const HomePage = () => (
-  <Space>
-    <Image
-      src="/links/next.svg"
-      alt="Vercel Logo"
-      className="dark:invert"
-      width={100}
-      height={24}
-      priority
-    />
-    <Button type="primary">WIP</Button>
-  </Space>
+  <>
+    <Space>
+      <Image width={200} src='/profile_pic_small.jpg' alt="Calvin's profile picture" preview={false} />
+    </Space>
+    <Space>
+      <Text color='#b9000c'>
+        Calvin Li
+      </Text>
+    </Space>
+  </>
 );
 
 export default HomePage;

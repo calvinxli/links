@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google';
 import StyledComponentsRegistry from '../lib/AntdRegistry';
 import '@/app/globals.css';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, theme } from 'antd';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,14 +16,18 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <ConfigProvider
       theme={{
-        token: {
-          // Seed Token
-          colorPrimary: '#00b96b',
-          borderRadius: 2,
+        algorithm: theme.darkAlgorithm,
 
-          // Alias Token
-          colorBgContainer: '#f6ffed',
-        },
+        // token: {
+        //   // Seed Token
+        //   colorPrimary: '#00b96b',
+        //   borderRadius: 2,
+
+        //   colorTextSecondary: "#00b96b",
+
+        //   // Alias Token
+        //   colorBgContainer: '#f6ffed',
+        // },
       }}
     >
       <body className={inter.className}>
