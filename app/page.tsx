@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button, Space, Image, Typography, ConfigProvider, theme, Col, Row } from 'antd';
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineMail } from 'react-icons/ai'
-import { MdLocationPin } from 'react-icons/Md'
+import { MdLocationPin } from 'react-icons/md'
 import { BsDiscord, BsTwitch } from 'react-icons/bs'
 
 const primaryColor = 'black';
