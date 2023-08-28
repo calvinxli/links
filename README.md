@@ -18,7 +18,7 @@ npm install @ant-design/cssinjs --save
 Each push to `main` branch should trigger a deployment of the page which will be available at `https://github-username.github.io/repo-name`. The link should also be available at `Settings -> Pages` once the site is live.
 Check the `Actions` tab on the repo for deployment status. 
 
-`basePath` shouldn't be set in `next.config.js` when using custom domain
+`basePath` shouldn't be set in `next.config.js` when using custom domain.
 ___________________
 ## Getting Started
 
