@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Button, Space, Image, Typography, ConfigProvider, theme } from 'antd';
+import { Button, Space, Image, Typography, ConfigProvider, theme, Col, Row } from 'antd';
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineMail } from 'react-icons/ai'
 import { MdLocationPin } from 'react-icons/Md'
 import { BsDiscord, BsTwitch } from 'react-icons/bs'
@@ -25,7 +25,7 @@ const socials = [
     'icon': <AiFillYoutube />,
     'link': 'https://www.youtube.com/@calvinxli',
     'color': '#FF0000',
-    'size': '60px'
+    'size': '80px'
   },
   {
     'icon': <BsDiscord />,
@@ -42,21 +42,27 @@ const socials = [
 ]
 
 const HomePage = () => (
-  <Space direction='vertical'>
-    <Space>
-      <Image width={200} src='/profile_pic_small.jpg' alt="Calvin's profile picture" preview={false} />
-    </Space>
-    <Space direction='vertical'>
-      <Title>
-        Calvin Li
-      </Title>
-      <Title level={4}><MdLocationPin />Seattle, WA</Title>
-      <Title level={5}>Tech | Foodie | Lifestyle</Title>
-      <Space>
+  <>
+    <Col span={24}>
+      <Row>
+        <Image width={200} src='/profile_pic_small.jpg' alt="Calvin's profile picture" preview={false} />
+      </Row>
+      <Row>
+        <Title style={{ margin: 12 }}>
+          Calvin Li
+        </Title>
+      </Row>
+      <Row>
+        <Title level={4} style={{ margin: 0 }}><MdLocationPin />Seattle, WA</Title>
+      </Row>
+      <Row>
+        <Title level={5} style={{ margin: 0 }}>Tech | Foodie | Lifestyle</Title>
+      </Row>
+      <Row align='middle'>
         {socials.map(social => <a style={{ "fontSize": social.size, "color": social.color }} type='button' href={social.link}>{social.icon}</a>)}
-      </Space>
-    </Space>
-  </Space>
+      </Row>
+    </Col>
+  </>
 );
 
 export default HomePage;
