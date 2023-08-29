@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Button, Space, Image, Typography, ConfigProvider, theme, Col, Row } from 'antd';
+import { Image, Typography, ConfigProvider, theme, Row } from 'antd';
 import { AiFillYoutube, AiOutlineInstagram, AiOutlineMail } from 'react-icons/ai'
 import { MdLocationPin } from 'react-icons/md'
 import { BsDiscord, BsTwitch } from 'react-icons/bs'
