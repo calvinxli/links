@@ -2,7 +2,9 @@ html,
 body {
     padding: 20px;
     margin: 0;
+    max-width: 560px;
     background: #000;
+    margin: auto;
 }
 
 /* 
