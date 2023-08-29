@@ -82,7 +82,7 @@ const HomePage = () => (
       </Title>
     </Row>
     <Row justify='center' align='middle'>
-      <iframe id="ytplayer" itemType='text/html' width="100%" style={{ borderRadius: '5%' }}
+      <iframe id="ytplayer" itemType='text/html' max-width="640px" style={{ borderRadius: '5%' }}
         src="https://www.youtube.com/embed/hwsGB-XObvA" frameBorder={0} allowFullScreen></iframe>
     </Row>
   </ConfigProvider>
