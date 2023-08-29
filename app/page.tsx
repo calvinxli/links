@@ -42,10 +42,18 @@ const socials = [
 ]
 
 const HomePage = () => (
-  <>
+  <ConfigProvider
+    theme={{
+      // 1. Use dark algorithm
+      algorithm: theme.darkAlgorithm,
+
+      // 2. Combine dark algorithm and compact algorithm
+      // algorithm: [theme.darkAlgorithm, theme.compactAlgorithm],
+    }}
+  >
     <Col span={24}>
       <Row>
-        <Image width={200} src='/profile_pic_small.jpg' alt="Calvin's profile picture" preview={false} />
+        <Image width={150} src='/profile_pic.jpg' alt="Calvin's profile picture" preview={false} style={{ borderRadius: '50%', border: '2px solid white' }} />
       </Row>
       <Row>
         <Title style={{ margin: 12 }}>
@@ -59,10 +67,10 @@ const HomePage = () => (
         <Title level={5} style={{ margin: 0 }}>Tech | Foodie | Lifestyle</Title>
       </Row>
       <Row align='middle'>
-        {socials.map(social => <a style={{ "fontSize": social.size, "color": social.color }} type='button' href={social.link}>{social.icon}</a>)}
+        {socials.map(social => <a style={{ "fontSize": social.size }} type='button' href={social.link}>{social.icon}</a>)}
       </Row>
     </Col>
-  </>
+  </ConfigProvider>
 );
 
 export default HomePage;
