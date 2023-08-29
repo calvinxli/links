@@ -66,7 +66,7 @@ const HomePage = () => (
       <Title level={5} style={{ margin: 0 }}>Tech | Foodie | Lifestyle</Title>
     </Row>
     <Row justify='center' align='middle'>
-      {socials.map(social => <a style={{ "fontSize": social.size, "color": social.color }} type='button' href={social.link}>{social.icon}</a>)}
+      {socials.map((social, _index) => <Link key={_index} style={{ "fontSize": social.size, "color": social.color }} href={social.link}>{social.icon}</Link>)}
     </Row>
   </ConfigProvider>
 );
