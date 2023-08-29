@@ -5,7 +5,7 @@ import { AiFillYoutube, AiOutlineInstagram, AiOutlineMail } from 'react-icons/ai
 import { MdLocationPin } from 'react-icons/md'
 import { BsDiscord, BsTwitch } from 'react-icons/bs'
 
-const primaryColor = 'black';
+const primaryColor = 'white';
 const defaultSocialSize = '40px'
 const { Text, Title, Link } = Typography;
 const socials = [
@@ -51,25 +51,23 @@ const HomePage = () => (
       // algorithm: [theme.darkAlgorithm, theme.compactAlgorithm],
     }}
   >
-    <Col span={24}>
-      <Row>
-        <Image width={150} src='/profile_pic.jpg' alt="Calvin's profile picture" preview={false} style={{ borderRadius: '50%', border: '2px solid white' }} />
-      </Row>
-      <Row>
-        <Title style={{ margin: 12 }}>
-          Calvin Li
-        </Title>
-      </Row>
-      <Row>
-        <Title level={4} style={{ margin: 0 }}><MdLocationPin />Seattle, WA</Title>
-      </Row>
-      <Row>
-        <Title level={5} style={{ margin: 0 }}>Tech | Foodie | Lifestyle</Title>
-      </Row>
-      <Row align='middle'>
-        {socials.map(social => <a style={{ "fontSize": social.size }} type='button' href={social.link}>{social.icon}</a>)}
-      </Row>
-    </Col>
+    <Row justify='center' align='middle'>
+      <Image width={150} src='/profile_pic.jpg' alt="Calvin's profile picture" preview={false} style={{ borderRadius: '50%', border: '2px solid white' }} />
+    </Row>
+    <Row justify='center' align='middle'>
+      <Title style={{ margin: 12 }}>
+        Calvin Li
+      </Title>
+    </Row>
+    <Row justify='center' align='middle'>
+      <Title level={4} style={{ margin: 0 }}><MdLocationPin />Seattle, WA</Title>
+    </Row>
+    <Row justify='center' align='middle'>
+      <Title level={5} style={{ margin: 0 }}>Tech | Foodie | Lifestyle</Title>
+    </Row>
+    <Row justify='center' align='middle'>
+      {socials.map(social => <a style={{ "fontSize": social.size, "color": social.color }} type='button' href={social.link}>{social.icon}</a>)}
+    </Row>
   </ConfigProvider>
 );
 

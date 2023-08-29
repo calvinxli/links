@@ -14,26 +14,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <ConfigProvider
-      theme={{
-        algorithm: theme.darkAlgorithm,
-
-        // token: {
-        //   // Seed Token
-        //   colorPrimary: '#00b96b',
-        //   borderRadius: 2,
-
-        //   colorTextSecondary: "#00b96b",
-
-        //   // Alias Token
-        //   colorBgContainer: '#f6ffed',
-        // },
-      }}
-    >
-      <body className={inter.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
-    </ConfigProvider>
+    <body className={inter.className}>
+      <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+    </body>
   </html>
 );
 
