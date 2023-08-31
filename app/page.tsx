@@ -1,19 +1,12 @@
 "use client";
 import React from "react";
-import { Image, Typography, Row, Tooltip, Collapse } from "antd";
-import {
-  AiFillYoutube,
-  AiOutlineInstagram,
-  AiOutlineMail,
-} from "react-icons/ai";
+import { Image, Typography, Row, Tooltip } from "antd";
 import { MdLocationPin } from "react-icons/md";
-import { BsDiscord } from "react-icons/bs";
-import { BiLogoTwitch } from "react-icons/bi";
-import { SocialLinkButton } from "@/components/Social";
 import { PageLayout } from "@/components/PageLayout";
 import LinkList from "@/components/LinkList";
+import SocialRow from "@/components/SocialRow";
 
-const { Text, Title } = Typography;
+const { Title } = Typography;
 
 const HomePage = () => (
   <PageLayout
@@ -50,35 +43,7 @@ const HomePage = () => (
             Tech | Foodie | Lifestyle
           </Title>
         </Row>
-        <Row justify="center" align="middle">
-          <SocialLinkButton
-            icon={<BiLogoTwitch />}
-            link="https://www.twitch.tv/calvinxli"
-            ariaLabel="twitch.tv"
-          />
-          <SocialLinkButton
-            icon={<AiOutlineInstagram />}
-            link="https://www.instagram.com/calvinxli"
-            ariaLabel="instagram.com"
-          />
-          <SocialLinkButton
-            icon={<AiFillYoutube />}
-            link="https://www.youtube.com/@calvinxli"
-            ariaLabel="youtube.com"
-            color="#FF0000"
-            size="50px"
-          />
-          <SocialLinkButton
-            icon={<BsDiscord />}
-            link="https://discord.gg/RD5wRyDEHE"
-            ariaLabel="discord.gg"
-          />
-          <SocialLinkButton
-            icon={<AiOutlineMail />}
-            link="mailto:impaccengineer@gmail.com"
-            ariaLabel="email"
-          />
-        </Row>
+        <SocialRow />
         {/* <LinkList
           header="Affiliates"
           items={[

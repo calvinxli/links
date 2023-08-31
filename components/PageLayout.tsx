@@ -1,7 +1,7 @@
 import { Layout, Menu, Typography, theme, ConfigProvider } from "antd";
 import React from "react";
 
-const { Text, Title } = Typography;
+const { Title } = Typography;
 const { Header, Content, Footer } = Layout;
 
 type PageLayoutProps = {
@@ -74,7 +74,9 @@ export class PageLayout extends React.Component<PageLayoutProps> {
             </Title>
           </Header>
           <Content style={{ padding: "0 50px" }}>{this.props.content}</Content>
-          {/* <Footer style={{ textAlign: "center" }}>Calvin Li</Footer> */}
+          <Footer style={{ textAlign: "center" }}>
+            This page was created by me! Its a work in progress.
+          </Footer>
         </Layout>
       </ConfigProvider>
     );
