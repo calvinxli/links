@@ -44,16 +44,41 @@ const HomePage = () => (
           </Title>
         </Row>
         <SocialRow />
-        {/* <LinkList
+        <LinkList
+          commisionsEarned={true}
           header="Affiliates"
           items={[
             {
-              title: "Hello",
-              subtitle: "world",
-              link: "https://www.google.com/",
+              title: "Tech bootcamp with JOB GUARANTEE!",
+              subtitle: "$1000 OFF with code: CALVINLI",
+              link: "https://www.springboard.com/courses/software-engineering-career-track/?utm_source=calvinli&utm_medium=influencer&utm_campaign=sec&utm_term=paid&utm_content=first_youtube_vid_2132023",
+              alt: "Springboard",
+            },
+            {
+              title: "Lofree | Aesthetic Keyboards and Accessories",
+              subtitle: "10% OFF CODE: calvinxli",
+              link: "https://www.lofree.co/?aff=211",
+              alt: "Lofree",
+            },
+            {
+              title: "Gruns Nutrition",
+              subtitle: "20% OFF yummy gummies with this link",
+              link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
+            },
+            {
+              title: "Grovemade Desk Shelf",
+              subtitle: "10% OFF code: IMPACC10",
+              link: "https://grovemade.com/desk-shelf-system?rfsn=7165896.d6eb21",
+              alt: "Grovemade",
+            },
+            {
+              title: "Graphene-X (Polo/Jogger)",
+              subtitle: "10% OFF code: IMPACC",
+              link: "https://bit.ly/3GxbGpy",
+              alt: "Graphene-X",
             },
           ]}
-        /> */}
+        />
         <Row justify="center" align="middle">
           <Title
             aria-label="Calvin Li"
