@@ -43,6 +43,7 @@ export class PageLayout extends React.Component<PageLayoutProps> {
         <Layout className="layout">
           <Header
             style={{
+              padding: "0 10px",
               display: "flex",
               alignItems: "center",
               marginBottom: headerPadding,
@@ -73,8 +74,8 @@ export class PageLayout extends React.Component<PageLayoutProps> {
               {name}
             </Title>
           </Header>
-          <Content style={{ padding: "0 50px" }}>{this.props.content}</Content>
-          <Footer style={{ textAlign: "center" }}>
+          <Content style={{ padding: "0 10px" }}>{this.props.content}</Content>
+          <Footer style={{ padding: "10px 10px", textAlign: "center" }}>
             This page was created by me! Its a work in progress.
           </Footer>
         </Layout>
