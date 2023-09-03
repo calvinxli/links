@@ -76,7 +76,8 @@ export class PageLayout extends React.Component<PageLayoutProps> {
           </Header>
           <Content style={{ padding: "0 10px" }}>{this.props.content}</Content>
           <Footer style={{ padding: "10px 10px", textAlign: "center" }}>
-            This page was created by me! Its a work in progress.
+            This page was created by me! Its a work in progress. Official site
+            at <a href="https://calvinxli.com">https://calvinxli.com</a>
           </Footer>
         </Layout>
       </ConfigProvider>

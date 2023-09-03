@@ -5,6 +5,7 @@ import { MdLocationPin } from "react-icons/md";
 import { PageLayout } from "@/components/PageLayout";
 import LinkList from "@/components/LinkList";
 import SocialRow from "@/components/SocialRow";
+import Link from "antd/es/typography/Link";
 
 const { Title } = Typography;
 
@@ -13,6 +14,10 @@ const HomePage = () => (
     content={
       <>
         <Row justify="center" align="middle">
+          <Title level={3}>
+            Work in progress side project. Official site at{" "}
+            <a href="https://calvinxli.com">https://calvinxli.com</a>
+          </Title>
           <Image
             width={150}
             src="/profile_pic.jpg"

@@ -26,6 +26,7 @@ class LinkList extends React.Component<LinkListProps> {
   renderLinks(): ReactNode {
     return this.props.items.map((item: LinkListItem) => (
       <Button
+        key={item.link}
         href={item.link}
         target="_blank"
         style={{
