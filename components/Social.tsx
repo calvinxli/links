@@ -20,8 +20,6 @@ export const SocialLinkButton: FunctionComponent<SocialProps> = ({
     key={ariaLabel}
     aria-label={ariaLabel}
     style={{
-      paddingLeft: "8px",
-      paddingRight: "8px",
       fontSize: size,
       color: color,
       margin: 0,

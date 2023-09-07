@@ -10,7 +10,7 @@ import { SocialLinkButton } from "./Social";
 
 export default function SocialRow() {
   return (
-    <Row justify="center" align="middle">
+    <Row justify="space-evenly" align="middle">
       <SocialLinkButton
         icon={<BiLogoTwitch />}
         link="https://www.twitch.tv/calvinxli"
