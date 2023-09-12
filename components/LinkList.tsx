@@ -1,8 +1,8 @@
 "use client";
-import { Typography, Button, Collapse, List, Space, Image } from "antd";
+import { Typography, Button, Collapse, Space, Image } from "antd";
 import React, { ReactNode } from "react";
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 
 export type LinkListItem = {
   title: string;
@@ -64,6 +64,7 @@ class LinkList extends React.Component<LinkListProps> {
         style={{
           fontWeight: "bold",
           textAlign: "center",
+          marginBottom: "16px",
         }}
         items={[
           {
