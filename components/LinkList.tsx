@@ -31,6 +31,7 @@ class LinkList extends React.Component<LinkListProps> {
         target="_blank"
         style={{
           height: "fit-content",
+          minHeight: "57.14px",
           width: "100%",
           marginTop: "6px",
           marginBottom: "6px",
@@ -53,7 +54,15 @@ class LinkList extends React.Component<LinkListProps> {
           {item.title}
         </Text>
         <br />
-        <Text>{item.subtitle}</Text>
+        {item.subtitle && (
+          <Text
+            style={{
+              fontSize: "14px",
+            }}
+          >
+            {item.subtitle}
+          </Text>
+        )}
       </Button>
     ));
   }
