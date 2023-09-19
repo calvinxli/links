@@ -34,9 +34,9 @@ const affilateLinks: LinkListItem[] = [
     alt: "Grovemade",
   },
   {
-    title: "Graphene-X (Polo/Jogger)",
+    title: "Graphene-X",
     subtitle: "10% OFF code: IMPACC",
-    link: "https://bit.ly/3GxbGpy",
+    link: "https://www.graphene-x.com/products/jogger-x-pants?rfsn=7014375.01f8a11",
     alt: "Graphene-X",
   },
 ];
@@ -77,6 +77,11 @@ class Home extends React.Component<HomeProps> {
           <Title level={5} style={{ margin: 0 }}>
             <MdLocationPin />
             Seattle, WA
+          </Title>
+        </Row>
+        <Row justify="center" align="middle">
+          <Title level={5} style={{ margin: 0 }}>
+            Software Engineer
           </Title>
         </Row>
         <Row justify="center" align="middle">
