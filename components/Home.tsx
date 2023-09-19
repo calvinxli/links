@@ -3,7 +3,7 @@ import React, { CSSProperties } from "react";
 import { Image, Typography, Row, Tooltip } from "antd";
 import { MdLocationPin } from "react-icons/md";
 import LinkList, { LinkListItem } from "@/components/LinkList";
-import SocialRow from "@/components/SocialRow";
+import Bio from "@/components/Bio";
 
 const { Title } = Typography;
 
@@ -49,47 +49,11 @@ class Home extends React.Component<HomeProps> {
   render() {
     return (
       <div style={this.props.style}>
-        <Row justify="center" align="middle">
-          <Title level={3} style={{ textAlign: "center", margin: "10px" }}>
-            Work in progress side project. Official site at{" "}
-            <a href="https://calvinxli.com">https://calvinxli.com</a>
-          </Title>
-          <Image
-            width={150}
-            src="/profile_pic.jpg"
-            alt="Calvin's profile picture"
-            preview={false}
-            style={{ borderRadius: "50%", border: "2px solid white" }}
-          />
-        </Row>
-        <Row justify="center" align="middle">
-          <Tooltip title="Calvin Li">
-            <Title
-              aria-label="Calvin Li"
-              level={3}
-              style={{ margin: 10, color: "white" }}
-            >
-              @calvinxli
-            </Title>
-          </Tooltip>
-        </Row>
-        <Row justify="center" align="middle">
-          <Title level={5} style={{ margin: 0 }}>
-            <MdLocationPin />
-            Seattle, WA
-          </Title>
-        </Row>
-        <Row justify="center" align="middle">
-          <Title level={5} style={{ margin: 0 }}>
-            Software Engineer
-          </Title>
-        </Row>
-        <Row justify="center" align="middle">
-          <Title level={5} style={{ margin: 0 }}>
-            Tech | Foodie | Lifestyle
-          </Title>
-        </Row>
-        <SocialRow />
+        <Title level={3} style={{ textAlign: "center", margin: "10px" }}>
+          Work in progress side project. Official site at{" "}
+          <a href="https://calvinxli.com">https://calvinxli.com</a>
+        </Title>
+        <Bio />
         <LinkList
           commisionsEarned={true}
           header="Affiliates"
