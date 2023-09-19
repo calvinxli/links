@@ -1,6 +1,6 @@
 "use client";
 import React, { CSSProperties } from "react";
-import { Image, Typography, Space } from "antd";
+import { Typography, Space } from "antd";
 import LinkList, { LinkListItem } from "@/components/LinkList";
 
 const { Text, Title } = Typography;
