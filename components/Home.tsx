@@ -15,29 +15,34 @@ const affilateLinks: LinkListItem[] = [
     subtitle: "$1000 OFF with code: CALVINLI",
     link: "https://www.springboard.com/courses/software-engineering-career-track/?utm_source=calvinli&utm_medium=influencer&utm_campaign=sec&utm_term=paid&utm_content=first_youtube_vid_2132023",
     alt: "Springboard",
+    image: "/springboard.png",
   },
   {
     title: "Lofree | Aesthetic Keyboards and Accessories",
     subtitle: "10% OFF CODE: calvinxli",
     link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
     alt: "Lofree",
+    image: "/lofree.png",
   },
   {
     title: "Gruns Nutrition",
     subtitle: "20% OFF yummy gummies with this link",
     link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
+    image: "/gruns.png",
   },
   {
     title: "Grovemade Desk Shelf",
     subtitle: "10% OFF code: IMPACC10",
     link: "https://grovemade.com/desk-shelf-system?rfsn=7165896.d6eb21",
     alt: "Grovemade",
+    image: "/grovemade.png",
   },
   {
     title: "Graphene-X",
     subtitle: "10% OFF code: IMPACC",
     link: "https://www.graphene-x.com/products/jogger-x-pants?rfsn=7014375.01f8a11",
     alt: "Graphene-X",
+    image: "/graphene-x.png",
   },
 ];
 
@@ -49,10 +54,6 @@ class Home extends React.Component<HomeProps> {
   render() {
     return (
       <div style={this.props.style}>
-        <Title level={3} style={{ textAlign: "center", margin: "10px" }}>
-          Work in progress side project. Official site at{" "}
-          <a href="https://calvinxli.com">https://calvinxli.com</a>
-        </Title>
         <Bio />
         <LinkList
           commisionsEarned={true}

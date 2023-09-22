@@ -3,9 +3,9 @@ import React, { CSSProperties } from "react";
 import { Typography, Space } from "antd";
 import LinkList, { LinkListItem } from "@/components/LinkList";
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 
-type HomeProps = { style?: CSSProperties | undefined };
+type GearProps = { style?: CSSProperties | undefined };
 
 const keyboardLinks: LinkListItem[] = [
   {
@@ -138,16 +138,16 @@ const hairLinks: LinkListItem[] = [
   },
 ];
 
-const healthLinks: LinkListItem[] = [
-  {
-    title: "Gruns Nutrition",
-    subtitle: "20% OFF with this link",
-    link: "https://gruns.co/pages/vip?snowball=CALVIN05232",
-  },
-];
+// const healthLinks: LinkListItem[] = [
+//   {
+//     title: "Gruns Nutrition",
+//     subtitle: "20% OFF with this link",
+//     link: "https://gruns.co/pages/vip?snowball=CALVIN05232",
+//   },
+// ];
 
-class Products extends React.Component<HomeProps> {
-  constructor(props: HomeProps) {
+class Gear extends React.Component<GearProps> {
+  constructor(props: GearProps) {
     super(props);
   }
 
@@ -165,8 +165,12 @@ class Products extends React.Component<HomeProps> {
         <LinkList header="Clothing" items={clothingLinks} />
         <LinkList header="Skincare" items={skincareLinks} />
         <LinkList header="Hair" items={hairLinks} />
-        <LinkList header="Health" items={healthLinks} />
-        <Space style={{ textAlign: "center", margin: "10px" }}>
+        {/* <LinkList header="Health" items={healthLinks} /> */}
+        <Space
+          size={0}
+          direction="vertical"
+          style={{ textAlign: "center", margin: "10px" }}
+        >
           <Text>As an Amazon Associate I earn from qualifying purchases.</Text>
           <Text>
             I may earn a commission at no cost to you, if you purchase item(s)
@@ -178,4 +182,4 @@ class Products extends React.Component<HomeProps> {
   }
 }
 
-export default Products;
+export default Gear;

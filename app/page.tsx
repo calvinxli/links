@@ -3,7 +3,7 @@ import React, { CSSProperties } from "react";
 import Home from "@/components/Home";
 import { Tabs, ConfigProvider, Typography, theme } from "antd";
 import type { TabsProps } from "antd";
-import Products from "@/components/Products";
+import Gear from "@/components/Gear";
 
 const { Title } = Typography;
 
@@ -19,9 +19,9 @@ const items: TabsProps["items"] = [
     children: <Home style={childrenStyle} />,
   },
   {
-    key: "products",
-    label: "Products/Gear",
-    children: <Products style={childrenStyle} />,
+    key: "gear",
+    label: "Gear",
+    children: <Gear style={childrenStyle} />,
   },
 ];
 

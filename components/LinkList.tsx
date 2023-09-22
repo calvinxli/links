@@ -1,5 +1,5 @@
 "use client";
-import { Typography, Button, Collapse, Space, Image } from "antd";
+import { Typography, Button, Collapse, Space, Image, Col, Row } from "antd";
 import React, { ReactNode } from "react";
 
 const { Text } = Typography;
@@ -35,34 +35,43 @@ class LinkList extends React.Component<LinkListProps> {
           width: "100%",
           marginTop: "6px",
           marginBottom: "6px",
+          padding: 8,
         }}
       >
-        {item.image && (
-          <Image
-            style={{ borderRadius: "5%" }}
-            width={45}
-            src={item.image}
-            alt={item.alt ?? item.title}
-          ></Image>
-        )}
-        <Text
-          style={{
-            fontWeight: "bold",
-            fontSize: "16px",
-          }}
-        >
-          {item.title}
-        </Text>
-        <br />
-        {item.subtitle && (
-          <Text
-            style={{
-              fontSize: "14px",
-            }}
+        <Row>
+          {item.image && (
+            <Image
+              preview={false}
+              style={{ borderRadius: "20%", float: "left" }}
+              width={45}
+              src={item.image}
+              alt={item.alt ?? item.title}
+            ></Image>
+          )}
+          <Col
+            flex="auto"
+            style={{ marginRight: 45, marginLeft: item.image ? 0 : 45 }}
           >
-            {item.subtitle}
-          </Text>
-        )}
+            <Text
+              style={{
+                fontWeight: "bold",
+                fontSize: "16px",
+              }}
+            >
+              {item.title}
+            </Text>
+            <br />
+            {item.subtitle && (
+              <Text
+                style={{
+                  fontSize: "14px",
+                }}
+              >
+                {item.subtitle}
+              </Text>
+            )}
+          </Col>
+        </Row>
       </Button>
     ));
   }
