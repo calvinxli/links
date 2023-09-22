@@ -50,7 +50,11 @@ class LinkList extends React.Component<LinkListProps> {
           )}
           <Col
             flex="auto"
-            style={{ marginRight: 45, marginLeft: item.image ? 0 : 45 }}
+            style={{
+              overflow: "wrap",
+              paddingRight: 45,
+              paddingLeft: item.image ? 0 : 45,
+            }}
           >
             <Text
               style={{

@@ -18,7 +18,7 @@ const affilateLinks: LinkListItem[] = [
     image: "/springboard.png",
   },
   {
-    title: "Lofree | Aesthetic Keyboards and Accessories",
+    title: "Lofree",
     subtitle: "10% OFF CODE: calvinxli",
     link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
     alt: "Lofree",
@@ -26,7 +26,7 @@ const affilateLinks: LinkListItem[] = [
   },
   {
     title: "Gruns Nutrition",
-    subtitle: "20% OFF yummy gummies with this link",
+    subtitle: "20% OFF w/ this link",
     link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
     image: "/gruns.png",
   },

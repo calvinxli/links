@@ -9,12 +9,18 @@ import { BsDiscord } from "react-icons/bs";
 import { SocialLinkButton } from "./Social";
 import { MdLocationPin } from "react-icons/md";
 
-const { Title } = Typography;
+const { Title, Link } = Typography;
 
 export default function Bio() {
   return (
     <>
       <Row justify="center" align="middle">
+        <Title level={5} style={{ marginTop: 0 }}>
+          Work in progress, real bio at{" "}
+          <Link style={{ fontSize: 16 }} href="https://calvinxli.com">
+            calvinxli.com
+          </Link>
+        </Title>
         <Image
           width={150}
           src="/profile_pic.jpg"
