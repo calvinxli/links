@@ -38,28 +38,26 @@ class LinkList extends React.Component<LinkListProps> {
           padding: 8,
         }}
       >
-        <Row>
-          {item.image && (
-            <Image
-              preview={false}
-              style={{ borderRadius: "20%", float: "left" }}
-              width={45}
-              src={item.image}
-              alt={item.alt ?? item.title}
-            ></Image>
-          )}
+        <Row wrap={false} align="middle" justify="center">
+          <Col flex="45px">
+            {item.image && (
+              <Image
+                preview={false}
+                style={{ borderRadius: "20%", float: "left", maxWidth: 45 }}
+                src={item.image}
+                alt={item.alt ?? item.title}
+              ></Image>
+            )}
+            {!item.image && "\u00a0"}
+          </Col>
           <Col
             flex="auto"
-            style={{
-              overflow: "wrap",
-              paddingRight: 45,
-              paddingLeft: item.image ? 0 : 45,
-            }}
+            style={{ whiteSpace: "normal", paddingLeft: 4, paddingRight: 4 }}
           >
             <Text
               style={{
                 fontWeight: "bold",
-                fontSize: "16px",
+                fontSize: "15px",
               }}
             >
               {item.title}
@@ -68,13 +66,15 @@ class LinkList extends React.Component<LinkListProps> {
             {item.subtitle && (
               <Text
                 style={{
-                  fontSize: "14px",
+                  fontSize: "13px",
+                  overflowWrap: "normal",
                 }}
               >
                 {item.subtitle}
               </Text>
             )}
           </Col>
+          <Col flex="45px">&nbsp;</Col>
         </Row>
       </Button>
     ));

@@ -10,7 +10,7 @@ type GearProps = { style?: CSSProperties | undefined };
 const keyboardLinks: LinkListItem[] = [
   {
     title: "OTG Keyboard",
-    subtitle: "Lofree Flow | 10% OFF CODE: calvinxli",
+    subtitle: "Lofree Flow | 10% OFF code: calvinxli",
     link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
     alt: "Lofree Flow",
   },
@@ -23,6 +23,7 @@ const keyboardLinks: LinkListItem[] = [
   {
     title: "Work Keycaps",
     link: "https://amzn.to/3r8uJ4y",
+    subtitle: "Mint Theme",
     alt: "Mint PBT XDA Keycaps",
   },
   {
@@ -34,6 +35,7 @@ const keyboardLinks: LinkListItem[] = [
   {
     title: "Home Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
+    subtitle: "EVA-01 Theme",
     alt: "EVA-01 PBT XDA Keycaps",
   },
 ];
@@ -94,7 +96,7 @@ const recordingLinks: LinkListItem[] = [
 const clothingLinks: LinkListItem[] = [
   {
     title: "Graphene-X",
-    subtitle: "10% OFF CODE: IMPACC",
+    subtitle: "10% OFF code: IMPACC",
     link: "https://www.graphene-x.com/products/jogger-x-pants?rfsn=7014375.01f8a11",
     alt: "Graphene-X",
   },

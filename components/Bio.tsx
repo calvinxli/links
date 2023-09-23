@@ -21,6 +21,8 @@ export default function Bio() {
             calvinxli.com
           </Link>
         </Title>
+      </Row>
+      <Row justify="center" align="middle">
         <Image
           width={150}
           src="/profile_pic.jpg"
