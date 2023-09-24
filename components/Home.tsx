@@ -57,7 +57,7 @@ class Home extends React.Component<HomeProps> {
         <Bio />
         <LinkList
           commisionsEarned={true}
-          header="Affiliates"
+          label="Affiliates"
           items={affilateLinks}
         />
         <Row justify="center" align="middle">

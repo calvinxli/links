@@ -160,13 +160,13 @@ class Gear extends React.Component<GearProps> {
           This is the stuff I use. I try to keep this updated but if you don't
           see what you're looking for, just ask!
         </Space>
-        <LinkList header="Keyboards" items={keyboardLinks} />
-        <LinkList header="Office (non-keyboards)" items={officeGearLinks} />
-        <LinkList header="Everyday Carry" items={everydayCarryLinks} />
-        <LinkList header="Recording" items={recordingLinks} />
-        <LinkList header="Clothing" items={clothingLinks} />
-        <LinkList header="Skincare" items={skincareLinks} />
-        <LinkList header="Hair" items={hairLinks} />
+        <LinkList label="Keyboards" items={keyboardLinks} />
+        <LinkList label="Office (non-keyboards)" items={officeGearLinks} />
+        <LinkList label="Everyday Carry" items={everydayCarryLinks} />
+        <LinkList label="Recording" items={recordingLinks} />
+        <LinkList label="Clothing" items={clothingLinks} />
+        <LinkList label="Skincare" items={skincareLinks} />
+        <LinkList label="Hair" items={hairLinks} />
         {/* <LinkList header="Health" items={healthLinks} /> */}
         <Space
           size={0}
