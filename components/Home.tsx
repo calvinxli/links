@@ -9,40 +9,42 @@ const { Title } = Typography;
 
 type HomeProps = { style?: CSSProperties | undefined };
 
+const basePath = "/affiliates/";
+
 const affilateLinks: LinkListItem[] = [
   {
     title: "Tech bootcamp with JOB GUARANTEE!",
     subtitle: "$1000 OFF code: CALVINLI",
     link: "https://www.springboard.com/courses/software-engineering-career-track/?utm_source=calvinli&utm_medium=influencer&utm_campaign=sec&utm_term=paid&utm_content=first_youtube_vid_2132023",
     alt: "Springboard",
-    image: "/springboard.png",
+    image: `${basePath}springboard.png`,
   },
   {
     title: "Lofree | Aesthetic Keyboards/Accessories",
     subtitle: "10% OFF code: calvinxli",
     link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
     alt: "Lofree",
-    image: "/lofree.png",
+    image: `${basePath}lofree.png`,
   },
   {
     title: "Gruns Nutrition",
     subtitle: "20% OFF w/ this link",
     link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
-    image: "/gruns.png",
+    image: `${basePath}gruns.png`,
   },
   {
     title: "Grovemade Desk Shelf",
     subtitle: "10% OFF code: IMPACC10",
     link: "https://grovemade.com/desk-shelf-system?rfsn=7165896.d6eb21",
     alt: "Grovemade",
-    image: "/grovemade.png",
+    image: `${basePath}grovemade.png`,
   },
   {
     title: "Graphene-X Clothing",
     subtitle: "10% OFF code: IMPACC",
     link: "https://www.graphene-x.com/products/jogger-x-pants?rfsn=7014375.01f8a11",
     alt: "Graphene-X, graphene-integrated clothing",
-    image: "/graphene-x.png",
+    image: `${basePath}graphene-x.png`,
   },
 ];
 

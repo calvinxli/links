@@ -10,12 +10,15 @@ import {
   theme,
 } from "antd";
 import React, { ReactNode } from "react";
+import { KEYBOARDS_LABEL } from "./Gear";
 
 const { Text } = Typography;
 
 const COLLAPSE_HEADER_FONT_SIZE = 16;
 const BUTTON_TITLE_FONT_SIZE = 14;
 const BUTTON_SUBTITLE_FONT_SIZE = 13;
+const BUTTON_VERTICAL_MARGIN = 3;
+const TEXT_SIDE_PADDING = 6;
 
 export type LinkListItem = {
   title: string;
@@ -26,7 +29,7 @@ export type LinkListItem = {
 };
 
 type LinkListProps = {
-  label: String;
+  label: string;
   items: LinkListItem[];
   commisionsEarned?: boolean;
 };
@@ -45,49 +48,60 @@ function renderLinks(items: LinkListItem[]): ReactNode {
       target="_blank"
       style={{
         height: "fit-content",
-        minHeight: "57.14px",
+        minHeight: "57px",
         width: "100%",
-        marginTop: 4,
-        marginBottom: 4,
-        paddingLeft: 8,
-        paddingRight: 8,
+        marginTop: BUTTON_VERTICAL_MARGIN,
+        marginBottom: BUTTON_VERTICAL_MARGIN,
+        padding: "6px 8px",
       }}
     >
       <Row wrap={false} align="middle" justify="center">
         <Col flex="45px">
-          {item.image && (
-            <Image
-              preview={false}
-              style={{ borderRadius: "20%", float: "left", maxWidth: 45 }}
-              src={item.image}
-              alt={item.alt ?? item.title}
-            ></Image>
-          )}
-          {!item.image && "\u00a0"}
+          <Row align="middle" justify="start">
+            {item.image && (
+              <Image
+                preview={false}
+                style={{
+                  borderRadius: "20%",
+                  maxWidth: 45,
+                }}
+                src={item.image}
+                alt={item.alt ?? item.title}
+              ></Image>
+            )}
+            {!item.image && "\u00a0"}
+          </Row>
         </Col>
         <Col
           flex="auto"
-          style={{ whiteSpace: "normal", paddingLeft: 6, paddingRight: 6 }}
+          style={{
+            whiteSpace: "normal",
+            paddingLeft: TEXT_SIDE_PADDING,
+            paddingRight: TEXT_SIDE_PADDING,
+          }}
         >
-          <Text
-            style={{
-              fontWeight: "bold",
-              fontSize: BUTTON_TITLE_FONT_SIZE,
-            }}
-          >
-            {item.title}
-          </Text>
-          <br />
-          {item.subtitle && (
-            <Text
-              style={{
-                fontSize: BUTTON_SUBTITLE_FONT_SIZE,
-                overflowWrap: "normal",
-              }}
-            >
-              {item.subtitle}
-            </Text>
-          )}
+          <Row align="middle" justify="center">
+            <Space align="center" direction="vertical" size={0}>
+              <Text
+                style={{
+                  fontWeight: "bold",
+                  fontSize: BUTTON_TITLE_FONT_SIZE,
+                }}
+              >
+                {item.title}
+              </Text>
+              {item.subtitle && (
+                <Text
+                  style={{
+                    fontSize: BUTTON_SUBTITLE_FONT_SIZE,
+                    overflowWrap: "normal",
+                  }}
+                >
+                  {item.subtitle}
+                </Text>
+              )}
+            </Space>
+          </Row>
         </Col>
         <Col flex="45px">&nbsp;</Col>
       </Row>
@@ -99,7 +113,7 @@ function renderLinks(items: LinkListItem[]): ReactNode {
  * @returns empty space big enough to offset the Collapse's arrow icon
  */
 function renderHeaderOffset(): ReactNode {
-  return <Space style={{ width: "24px", height: "22px" }}>&nbsp;</Space>;
+  return <Space style={{ width: 24, height: 22 }}>&nbsp;</Space>;
 }
 
 const LinkList: React.FunctionComponent<LinkListProps> = (
@@ -116,6 +130,9 @@ const LinkList: React.FunctionComponent<LinkListProps> = (
   return (
     <Collapse
       bordered={false}
+      defaultActiveKey={
+        props.label === KEYBOARDS_LABEL ? KEYBOARDS_LABEL : undefined
+      }
       style={{
         fontWeight: "bold",
         fontSize: COLLAPSE_HEADER_FONT_SIZE,
@@ -124,7 +141,7 @@ const LinkList: React.FunctionComponent<LinkListProps> = (
       }}
       items={[
         {
-          key: "1",
+          key: props.label,
           label: props.label,
           extra: renderHeaderOffset(),
           children: (

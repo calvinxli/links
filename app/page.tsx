@@ -33,6 +33,13 @@ const HomePage = () => (
 
       // 2. Combine dark algorithm and compact algorithm
       // algorithm: [theme.darkAlgorithm, theme.compactAlgorithm],
+
+      components: {
+        Collapse: {
+          contentBg: "black",
+          contentPadding: "4px 4px 1px 4px",
+        },
+      },
     }}
   >
     <Tabs
