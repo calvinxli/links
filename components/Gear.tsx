@@ -154,7 +154,7 @@ class Gear extends React.Component<GearProps> {
   render() {
     return (
       <div style={this.props.style}>
-        <Space style={{ textAlign: "center", margin: "10px" }}>
+        <Space style={{ textAlign: "center", margin: "10px", fontSize: 12 }}>
           This is the stuff I use. I try to keep this updated but if you don't
           see what you're looking for, just ask!
         </Space>
@@ -167,12 +167,12 @@ class Gear extends React.Component<GearProps> {
         <Space
           size={0}
           direction="vertical"
-          style={{ textAlign: "center", margin: "10px" }}
+          style={{ textAlign: "center", marginBottom: 16 }}
         >
-          <Text>As an Amazon Associate I earn from qualifying purchases.</Text>
-          <Text>
-            I may earn a commission at no cost to you, if you purchase item(s)
-            through the product links above.
+          <Text style={{ fontSize: 12 }}>
+            As an Amazon Associate I earn from qualifying purchases.
+            <br />I may earn a commission at no cost to you, if you purchase
+            item(s) through the product links above.
           </Text>
         </Space>
       </div>
