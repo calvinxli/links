@@ -1,14 +1,21 @@
 "use client";
 import React, { CSSProperties } from "react";
-import { Typography, Space } from "antd";
+import { Space } from "antd";
 import LinkList, { LinkListItem } from "@/components/LinkList";
 
-const { Text } = Typography;
-type GearProps = { style?: CSSProperties | undefined };
+export const KEYBOARDS_LABEL = "Keyboards";
 
-const KEYBOARDS_BASE_PATH = "/keyboards/";
-const OFFICE_BASE_PATH = "/office/";
-const EDC_BASE_PATH = "/edc/";
+const keyboardsBasePath = "/keyboards/";
+const recordingBasePath = "/recording/";
+const officeBasePath = "/office/";
+const lightingBasePath = "/lighting/";
+const edcBasePath = "/edc/";
+
+const spaceStyle: React.CSSProperties = {
+  textAlign: "center",
+  marginBottom: 16,
+  fontSize: 12,
+};
 
 const keyboardLinks: LinkListItem[] = [
   {
@@ -20,31 +27,62 @@ const keyboardLinks: LinkListItem[] = [
   },
   {
     title: "Work Keyboard",
-    subtitle: "keydous NJ80-AP",
+    subtitle: "Keydous NJ80-AP",
     link: "https://amzn.to/3Pz4PjR",
     alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
-    image: `${KEYBOARDS_BASE_PATH}work_keyboard.png`,
+    image: `${keyboardsBasePath}work_keyboard.png`,
   },
   {
     title: "Work Keycaps",
     link: "https://amzn.to/3r8uJ4y",
     subtitle: "Mint Theme",
     alt: "Mint PBT XDA Keycaps",
-    image: `${KEYBOARDS_BASE_PATH}work_keycaps.png`,
+    image: `${keyboardsBasePath}work_keycaps.png`,
   },
   {
     title: "Home Keyboard",
     subtitle: "ASUS ROG Azoth 75%",
     link: "https://amzn.to/3Pxibx6",
     alt: "Home Keyboard - ASUS Rog Azoth 75%",
-    image: `${KEYBOARDS_BASE_PATH}home_keyboard.png`,
+    image: `${keyboardsBasePath}home_keyboard.png`,
   },
   {
     title: "Home Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
     subtitle: "EVA-01 Theme",
     alt: "EVA-01 PBT XDA Keycaps",
-    image: `${KEYBOARDS_BASE_PATH}home_keycaps.png`,
+    image: `${keyboardsBasePath}home_keycaps.png`,
+  },
+  {
+    title: "Spacebar Foam",
+    link: "https://amzn.to/3sYP0tS",
+    subtitle: "the final touch",
+    alt: "Spacebar Foam",
+    image: `${keyboardsBasePath}spacebar_foam.png`,
+  },
+];
+
+const recordingLinks: LinkListItem[] = [
+  {
+    title: "Phone",
+    subtitle: "Pixel 7 Pro",
+    link: "https://amzn.to/44RRJTe",
+    alt: "Pixel 7 Pro Phone",
+    image: `${recordingBasePath}phone.png`,
+  },
+  {
+    title: "Video Camera",
+    subtitle: "Sony ZV-1",
+    link: "https://amzn.to/3rhI6zq",
+    alt: "Sony ZV-1 Vlogging Camera",
+    image: `${recordingBasePath}video_cam.png`,
+  },
+  {
+    title: "Camera-mount Microphone",
+    subtitle: "Rode VideoMicro II",
+    link: "https://amzn.to/48lW0kL",
+    alt: "Rode VideoMicro II Camera-mount Compact Shotgun Microphone",
+    image: `${recordingBasePath}camera_mount_mic.png`,
   },
 ];
 
@@ -56,6 +94,79 @@ const officeGearLinks: LinkListItem[] = [
     alt: "Grovemade",
     image: "/affiliates/grovemade.png",
   },
+  {
+    title: "Mouse",
+    subtitle: "Logitech G604",
+    link: "https://amzn.to/3PPN4gl",
+    alt: "Logitech G604 LIGHTSPEED Gaming Mouse",
+    image: `${officeBasePath}mouse.png`,
+  },
+  {
+    title: "Webcam",
+    subtitle: "Logitech Brio 4K",
+    link: "https://amzn.to/3PQf976",
+    alt: "Logitech Brio 4K Webcam",
+    image: `${officeBasePath}webcam.png`,
+  },
+  {
+    title: "Speakers",
+    subtitle: "Audioengine HD3",
+    link: "https://amzn.to/3RuGZY1",
+    alt: "Audioengine HD3 Wireless Speakers with Bluetooth - 60W Powered Computer Speakers",
+    image: `${officeBasePath}speakers.png`,
+  },
+  {
+    title: "Monitor Light",
+    subtitle: "Dual Light Bars",
+    link: "https://amzn.to/3LClm4e",
+    alt: "Computer Monitor Light Bar,Wireless Remote Control Multiple Screen Lamp with Dimmer Switch",
+    image: `${officeBasePath}light_bar.png`,
+  },
+  {
+    title: "Microphone",
+    subtitle: "Shure SM7B",
+    link: "https://amzn.to/452AXkm",
+    alt: "Shure SM7B Dynamic Microphone",
+    image: `${officeBasePath}microphone.png`,
+  },
+  {
+    title: "Microphone Arm",
+    subtitle: "Elgato Wave Mic Arm LP",
+    link: "https://amzn.to/44YhAch",
+    alt: "Elgato Wave Mic Arm LP",
+    image: `${officeBasePath}mic_arm.png`,
+  },
+  {
+    title: "Chair",
+    subtitle: "Steelcase Gesture",
+    link: "https://amzn.to/3ENwffM",
+    alt: "Steelcase Gesture Office Chair",
+    image: `${officeBasePath}chair.png`,
+  },
+];
+
+const lightingLinks: LinkListItem[] = [
+  {
+    title: "Wall Light",
+    subtitle: "Govee Glide",
+    link: "https://amzn.to/454xlhR",
+    alt: "Govee Glide RGBIC LED Wall Lights, Smart RGBIC Wall Sconces for Gaming TV Bedroom Streaming, Work with Alexa and Google Assistant",
+    image: `${lightingBasePath}wall_light.png`,
+  },
+  {
+    title: "Floor Lamp",
+    subtitle: "Govee Lyra",
+    link: "https://amzn.to/45aVrr3",
+    alt: "Govee Floor Lamp, RGBIC Lyra Color Changing Corner Lamp, Modern LED Lights with Wi-Fi App Control",
+    image: `${lightingBasePath}floor_lamp.png`,
+  },
+  {
+    title: "Rope Light",
+    subtitle: "Govee Neon",
+    link: "https://amzn.to/461BTXr",
+    alt: "Govee Neon RGBIC Rope Lights with Music Sync",
+    image: `${lightingBasePath}rope_light.png`,
+  },
 ];
 
 const everydayCarryLinks: LinkListItem[] = [
@@ -64,47 +175,14 @@ const everydayCarryLinks: LinkListItem[] = [
     link: "https://amzn.to/3EKLshA",
     subtitle: "Peak Design Everyday V2",
     alt: "Peak Design Everyday Backpack V2 20L",
-    image: `${EDC_BASE_PATH}backpack.png`,
+    image: `${edcBasePath}backpack.png`,
   },
   {
     title: "Noise Cancelling Earbuds",
     subtitle: "Sony WF-1000XM4",
     link: "https://amzn.to/3EKOJh2",
     alt: "Noise Cancelling Earbuds",
-    image: `${EDC_BASE_PATH}earbuds.png`,
-  },
-];
-
-const recordingLinks: LinkListItem[] = [
-  {
-    title: "Phone",
-    subtitle: "Pixel 7 Pro",
-    link: "https://amzn.to/44RRJTe",
-    alt: "Pixel 7 Pro Phone",
-  },
-  {
-    title: "Video Camera",
-    subtitle: "Sony ZV-1",
-    link: "https://amzn.to/3rhI6zq",
-    alt: "Sony ZV-1 Vlogging Camera",
-  },
-  {
-    title: "Camera-mount Microphone",
-    subtitle: "Rode VideoMicro II",
-    link: "https://amzn.to/48lW0kL",
-    alt: "Rode VideoMicro II Camera-mount Compact Shotgun Microphone",
-  },
-  {
-    title: "VO/VC Microphone",
-    subtitle: "Shure SM7B",
-    link: "https://amzn.to/452AXkm",
-    alt: "Shure SM7B Dynamic Microphone",
-  },
-  {
-    title: "Microphone Arm",
-    subtitle: "Elgato Wave Mic Arm LP",
-    link: "https://amzn.to/44YhAch",
-    alt: "Elgato Wave Mic Arm LP",
+    image: `${edcBasePath}earbuds.png`,
   },
 ];
 
@@ -146,40 +224,29 @@ const hairLinks: LinkListItem[] = [
   },
 ];
 
-class Gear extends React.Component<GearProps> {
-  constructor(props: GearProps) {
-    super(props);
-  }
+type GearProps = { style?: CSSProperties | undefined };
 
-  render() {
-    return (
-      <div style={this.props.style}>
-        <Space style={{ textAlign: "center", margin: "10px", fontSize: 12 }}>
-          This is the stuff I use. I try to keep this updated but if you don't
-          see what you're looking for, just ask!
-        </Space>
-        <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
-        <LinkList label="Office (non-keyboards)" items={officeGearLinks} />
-        <LinkList label="Everyday Carry" items={everydayCarryLinks} />
-        <LinkList label="Recording" items={recordingLinks} />
-        <LinkList label="Skincare" items={skincareLinks} />
-        <LinkList label="Hair" items={hairLinks} />
-        <Space
-          size={0}
-          direction="vertical"
-          style={{ textAlign: "center", marginBottom: 16 }}
-        >
-          <Text style={{ fontSize: 12 }}>
-            As an Amazon Associate I earn from qualifying purchases.
-            <br />I may earn a commission at no cost to you, if you purchase
-            item(s) through the product links above.
-          </Text>
-        </Space>
-      </div>
-    );
-  }
-}
-
-export const KEYBOARDS_LABEL = "Keyboards";
+const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
+  return (
+    <div style={props.style}>
+      <Space style={spaceStyle}>
+        This is the stuff I use. I try to keep this updated but if you don't see
+        what you're looking for, just ask!
+      </Space>
+      <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
+      <LinkList label="Recording" items={recordingLinks} />
+      <LinkList label="Office (non-keyboards)" items={officeGearLinks} />
+      <LinkList label="Lighting" items={lightingLinks} />
+      <LinkList label="Everyday Carry" items={everydayCarryLinks} />
+      <LinkList label="Skincare" items={skincareLinks} />
+      <LinkList label="Hair" items={hairLinks} />
+      <Space size={0} direction="vertical" style={spaceStyle}>
+        As an Amazon Associate I earn from qualifying purchases. I may earn a
+        commission at no cost to you, if you purchase item(s) through the
+        product links above.
+      </Space>
+    </div>
+  );
+};
 
 export default Gear;

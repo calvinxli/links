@@ -12,6 +12,7 @@ const childrenStyle: CSSProperties = {
   paddingLeft: sidePadding,
   paddingRight: sidePadding,
 };
+
 const items: TabsProps["items"] = [
   {
     key: "home",
@@ -37,7 +38,7 @@ const HomePage = () => (
       components: {
         Collapse: {
           contentBg: "black",
-          contentPadding: "4px 4px 1px 4px",
+          contentPadding: "4px 4px 2px 4px",
         },
       },
     }}

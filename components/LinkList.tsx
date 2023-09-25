@@ -17,7 +17,7 @@ const { Text } = Typography;
 const COLLAPSE_HEADER_FONT_SIZE = 16;
 const BUTTON_TITLE_FONT_SIZE = 14;
 const BUTTON_SUBTITLE_FONT_SIZE = 13;
-const BUTTON_VERTICAL_MARGIN = 3;
+const BUTTON_VERTICAL_MARGIN = 2;
 const TEXT_SIDE_PADDING = 6;
 
 export type LinkListItem = {
@@ -48,14 +48,17 @@ function renderLinks(items: LinkListItem[]): ReactNode {
       target="_blank"
       style={{
         height: "fit-content",
-        minHeight: "57px",
         width: "100%",
-        marginTop: BUTTON_VERTICAL_MARGIN,
-        marginBottom: BUTTON_VERTICAL_MARGIN,
-        padding: "6px 8px",
+        margin: `${BUTTON_VERTICAL_MARGIN}px 0px`,
+        padding: "8px 8px",
       }}
     >
-      <Row wrap={false} align="middle" justify="center">
+      <Row
+        wrap={false}
+        align="middle"
+        justify="center"
+        style={{ display: "flex", minHeight: 45 }}
+      >
         <Col flex="45px">
           <Row align="middle" justify="start">
             {item.image && (
@@ -80,7 +83,7 @@ function renderLinks(items: LinkListItem[]): ReactNode {
             paddingRight: TEXT_SIDE_PADDING,
           }}
         >
-          <Row align="middle" justify="center">
+          <Row align="middle" justify="center" style={{ margin: "auto" }}>
             <Space align="center" direction="vertical" size={0}>
               <Text
                 style={{

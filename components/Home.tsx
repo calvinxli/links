@@ -27,12 +27,6 @@ const affilateLinks: LinkListItem[] = [
     image: `${basePath}lofree.png`,
   },
   {
-    title: "Gruns Nutrition",
-    subtitle: "20% OFF w/ this link",
-    link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
-    image: `${basePath}gruns.png`,
-  },
-  {
     title: "Grovemade Desk Shelf",
     subtitle: "10% OFF code: IMPACC10",
     link: "https://grovemade.com/desk-shelf-system?rfsn=7165896.d6eb21",
@@ -45,6 +39,12 @@ const affilateLinks: LinkListItem[] = [
     link: "https://www.graphene-x.com/products/jogger-x-pants?rfsn=7014375.01f8a11",
     alt: "Graphene-X, graphene-integrated clothing",
     image: `${basePath}graphene-x.png`,
+  },
+  {
+    title: "Gruns Nutrition",
+    subtitle: "20% OFF w/ this link",
+    link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
+    image: `${basePath}gruns.png`,
   },
 ];
 
