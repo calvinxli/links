@@ -73,6 +73,7 @@ class Home extends React.Component<HomeProps> {
         </Row>
         <Row justify="center" align="middle" style={{ marginBottom: 16 }}>
           <iframe
+            loading="lazy"
             id="ytplayer"
             itemType="text/html"
             style={{
