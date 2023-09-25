@@ -9,7 +9,7 @@ import { BsDiscord } from "react-icons/bs";
 import { SocialLinkButton } from "./Social";
 import { MdLocationPin } from "react-icons/md";
 
-const { Title } = Typography;
+const { Text, Title } = Typography;
 
 export default function Bio() {
   return (
@@ -28,17 +28,11 @@ export default function Bio() {
           <Title
             aria-label="Calvin Li"
             level={3}
-            style={{ margin: 10, color: "white" }}
+            style={{ marginTop: 4, marginBottom: 6, color: "white" }}
           >
             @calvinxli
           </Title>
         </Tooltip>
-      </Row>
-      <Row justify="center" align="middle">
-        <Title level={5} style={{ margin: 0 }}>
-          <MdLocationPin />
-          Seattle, WA
-        </Title>
       </Row>
       <Row justify="center" align="middle">
         <Title level={5} style={{ margin: 0 }}>
@@ -49,6 +43,12 @@ export default function Bio() {
         <Title level={5} style={{ margin: 0 }}>
           Tech | Foodie | Lifestyle
         </Title>
+      </Row>
+      <Row justify="center" align="middle">
+        <Text style={{ fontWeight: "bold", margin: 0 }}>
+          <MdLocationPin />
+          Seattle, WA
+        </Text>
       </Row>
       <Row justify="space-evenly" align="middle">
         <SocialLinkButton
