@@ -1,9 +1,9 @@
 "use client";
 import React, { CSSProperties } from "react";
-import { Image, Typography, Row, Tooltip } from "antd";
-import { MdLocationPin } from "react-icons/md";
+import { Typography, Row } from "antd";
 import LinkList, { LinkListItem } from "@/components/LinkList";
 import Bio from "@/components/Bio";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const { Title } = Typography;
 
@@ -72,19 +72,7 @@ class Home extends React.Component<HomeProps> {
           </Title>
         </Row>
         <Row justify="center" align="middle" style={{ marginBottom: 16 }}>
-          <iframe
-            loading="lazy"
-            id="ytplayer"
-            itemType="text/html"
-            style={{
-              borderRadius: "5%",
-              aspectRatio: "16/9",
-              width: "100%",
-              border: 0,
-            }}
-            src="https://www.youtube.com/embed/hwsGB-XObvA"
-            allowFullScreen
-          ></iframe>
+          <LiteYouTubeEmbed id="hwsGB-XObvA" title="Latest Vlog" />
         </Row>
       </div>
     );

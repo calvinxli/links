@@ -56,7 +56,7 @@ const keyboardLinks: LinkListItem[] = [
   {
     title: "Spacebar Foam",
     link: "https://amzn.to/3sYP0tS",
-    subtitle: "the final touch",
+    subtitle: "finishing touch",
     alt: "Spacebar Foam",
     image: `${keyboardsBasePath}spacebar_foam.png`,
   },
