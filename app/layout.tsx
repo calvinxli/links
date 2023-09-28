@@ -24,18 +24,17 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <Head>
       <link rel="canonical" href="https://www.calvinxli.com" key="canonical" />
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-TEL22919JK" />
-      <Script id="google-analytics">
-        {`
+    </Head>
+    <Script src="https://www.googletagmanager.com/gtag/js?id=G-TEL22919JK" />
+    <Script id="google-analytics">
+      {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
           gtag('config', 'G-TEL22919JK');
         `}
-      </Script>
-    </Head>
-
+    </Script>
     <body className={inter.className}>
       <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
     </body>
