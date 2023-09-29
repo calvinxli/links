@@ -1,7 +1,7 @@
 "use client";
 import React, { CSSProperties } from "react";
 import Home from "@/components/Home";
-import { Tabs, ConfigProvider, Typography, theme } from "antd";
+import { Tabs, ConfigProvider, Typography, theme, Row } from "antd";
 import type { TabsProps } from "antd";
 import Gear from "@/components/Gear";
 
