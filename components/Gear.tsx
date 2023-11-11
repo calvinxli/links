@@ -204,8 +204,8 @@ const hairLinks: LinkListItem[] = [
     link: "https://amzn.to/3PrHZt8",
   },
   {
-    title: "Hair Cream",
-    link: "https://amzn.to/48jjYgA",
+    title: "Heat Protectant",
+    link: "https://amzn.to/3MEXHjU",
   },
   {
     title: "Hair Spray",
