@@ -72,7 +72,7 @@ class Home extends React.Component<HomeProps> {
           </Title>
         </Row>
         <Row justify="center" align="middle" style={{ marginBottom: 16 }}>
-          <LiteYouTubeEmbed id="hwsGB-XObvA" title="Latest Vlog" />
+          <LiteYouTubeEmbed id="GB7lIbyJe_I" title="Latest Vlog" />
         </Row>
         <Row justify="center" align="middle">
           <Typography.Text style={{ textAlign: "center" }}>
