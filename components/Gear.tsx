@@ -72,17 +72,10 @@ const recordingLinks: LinkListItem[] = [
   },
   {
     title: "Video Camera",
-    subtitle: "Sony ZV-1",
-    link: "https://amzn.to/3rhI6zq",
-    alt: "Sony ZV-1 Vlogging Camera",
+    subtitle: "DJI Osmo Pocket 3",
+    link: "https://amzn.to/3QTJv8n",
+    alt: "DJI Osmo Pocket 3 Creator Combo",
     image: `${recordingBasePath}video_cam.png`,
-  },
-  {
-    title: "Camera-mount Microphone",
-    subtitle: "Rode VideoMicro II",
-    link: "https://amzn.to/48lW0kL",
-    alt: "Rode VideoMicro II Camera-mount Compact Shotgun Microphone",
-    image: `${recordingBasePath}camera_mount_mic.png`,
   },
 ];
 
@@ -123,7 +116,7 @@ const officeGearLinks: LinkListItem[] = [
     image: `${officeBasePath}light_bar.png`,
   },
   {
-    title: "Microphone",
+    title: "Microphone (VO + VC)",
     subtitle: "Shure SM7B",
     link: "https://amzn.to/452AXkm",
     alt: "Shure SM7B Dynamic Microphone",
