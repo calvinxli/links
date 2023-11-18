@@ -7,7 +7,7 @@ export const KEYBOARDS_LABEL = "Keyboards";
 
 const keyboardsBasePath = "/keyboards/";
 const recordingBasePath = "/recording/";
-const officeBasePath = "/office/";
+const desktopBasePath = "/desktop/";
 const lightingBasePath = "/lighting/";
 const edcBasePath = "/edc/";
 
@@ -79,7 +79,7 @@ const recordingLinks: LinkListItem[] = [
   },
 ];
 
-const officeGearLinks: LinkListItem[] = [
+const desktopGearLinks: LinkListItem[] = [
   {
     title: "Grovemade Desk Shelf",
     subtitle: "10% OFF code: IMPACC10",
@@ -92,49 +92,55 @@ const officeGearLinks: LinkListItem[] = [
     subtitle: "Logitech G604",
     link: "https://amzn.to/3PPN4gl",
     alt: "Logitech G604 LIGHTSPEED Gaming Mouse",
-    image: `${officeBasePath}mouse.png`,
+    image: `${desktopBasePath}mouse.png`,
   },
   {
     title: "Webcam",
     subtitle: "Logitech Brio 4K",
     link: "https://amzn.to/3PQf976",
     alt: "Logitech Brio 4K Webcam",
-    image: `${officeBasePath}webcam.png`,
+    image: `${desktopBasePath}webcam.png`,
   },
   {
     title: "Speakers",
     subtitle: "Audioengine HD3",
     link: "https://amzn.to/3RuGZY1",
     alt: "Audioengine HD3 Wireless Speakers with Bluetooth - 60W Powered Computer Speakers",
-    image: `${officeBasePath}speakers.png`,
+    image: `${desktopBasePath}speakers.png`,
   },
   {
-    title: "Monitor Light",
-    subtitle: "Dual Light Bars",
-    link: "https://amzn.to/3LClm4e",
-    alt: "Computer Monitor Light Bar,Wireless Remote Control Multiple Screen Lamp with Dimmer Switch",
-    image: `${officeBasePath}light_bar.png`,
+    title: "Monitor",
+    subtitle: 'Samsung 49" G93SC OLED',
+    link: "https://amzn.to/3uk71DR",
+    alt: 'SAMSUNG 49" Odyssey G93SC Series OLED LS49CG932SNXZA',
+    image: `${desktopBasePath}monitor.png`,
+  },
+  {
+    title: "Monitor Light Bar",
+    link: "https://amzn.to/49KnNvO",
+    alt: "ONWAY Curved Monitor Light Bar with Wireless Remote",
+    image: `${desktopBasePath}light_bar.png`,
   },
   {
     title: "Microphone (VO + VC)",
     subtitle: "Shure SM7B",
     link: "https://amzn.to/452AXkm",
     alt: "Shure SM7B Dynamic Microphone",
-    image: `${officeBasePath}microphone.png`,
+    image: `${desktopBasePath}microphone.png`,
   },
   {
     title: "Microphone Arm",
     subtitle: "Elgato Wave Mic Arm LP",
     link: "https://amzn.to/44YhAch",
     alt: "Elgato Wave Mic Arm LP",
-    image: `${officeBasePath}mic_arm.png`,
+    image: `${desktopBasePath}mic_arm.png`,
   },
   {
     title: "Chair",
     subtitle: "Steelcase Gesture",
     link: "https://amzn.to/3ENwffM",
     alt: "Steelcase Gesture Office Chair",
-    image: `${officeBasePath}chair.png`,
+    image: `${desktopBasePath}chair.png`,
   },
 ];
 
@@ -211,10 +217,10 @@ const hairLinks: LinkListItem[] = [
     title: "Hair Spray",
     link: "https://amzn.to/48ilD62",
   },
-  {
-    title: "Dry Shampoo",
-    link: "https://amzn.to/3PgwBjO",
-  },
+  // {
+  //   title: "Dry Shampoo",
+  //   link: "https://amzn.to/3PgwBjO",
+  // },
 ];
 
 type GearProps = { style?: CSSProperties | undefined };
@@ -228,7 +234,7 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
       </Space>
       <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
       <LinkList label="Recording" items={recordingLinks} />
-      <LinkList label="Office (non-keyboards)" items={officeGearLinks} />
+      <LinkList label="Desktop" items={desktopGearLinks} />
       <LinkList label="Lighting" items={lightingLinks} />
       <LinkList label="Everyday Carry" items={everydayCarryLinks} />
       <LinkList label="Skincare" items={skincareLinks} />
