@@ -1,12 +1,11 @@
 "use client";
 import React, { CSSProperties } from "react";
-import { Space } from "antd";
+import { Space, Typography } from "antd";
 import LinkList, { LinkListItem } from "@/components/LinkList";
-
+const { Text } = Typography;
 export const KEYBOARDS_LABEL = "Keyboards";
 
-const keyboardsBasePath = "/keyboards/";
-const recordingBasePath = "/recording/";
+const cameraBasePath = "/camera/";
 const desktopBasePath = "/desktop/";
 const lightingBasePath = "/lighting/";
 const edcBasePath = "/edc/";
@@ -30,62 +29,79 @@ const keyboardLinks: LinkListItem[] = [
     subtitle: "work keyboard",
     link: "https://amzn.to/3Pz4PjR",
     alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
-    image: `${keyboardsBasePath}work_keyboard.png`,
   },
   {
     title: "ASUS ROG Azoth 75%",
     subtitle: "home keyboard",
     link: "https://amzn.to/3Pxibx6",
-    alt: "Home Keyboard - ASUS Rog Azoth 75%",
-    image: `${keyboardsBasePath}home_keyboard.png`,
+    alt: "ASUS ROG Azoth 75% Wireless DIY Custom Gaming Keyboard",
   },
   {
     title: "Mint Theme Keycaps",
     link: "https://amzn.to/3r8uJ4y",
     subtitle: "on work keyboard",
     alt: "Mint PBT XDA Keycaps",
-    image: `${keyboardsBasePath}work_keycaps.png`,
   },
   {
-    title: "EVA-01 Theme Keycaps",
+    title: "EVA-01 Anime Theme Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
     subtitle: "on home keyboard",
-    alt: "EVA-01 PBT XDA Keycaps",
-    image: `${keyboardsBasePath}home_keycaps.png`,
+    alt: "Evangelion EVA-01 PBT XDA Anime Keycaps",
   },
   {
     title: "Spacebar Foam",
     link: "https://amzn.to/3sYP0tS",
     subtitle: "spacebar sound treatment",
     alt: "Spacebar Foam",
-    image: `${keyboardsBasePath}spacebar_foam.png`,
   },
 ];
 
-const recordingLinks: LinkListItem[] = [
-  {
-    title: "Phone",
-    subtitle: "Pixel 7 Pro",
-    link: "https://amzn.to/44RRJTe",
-    alt: "Pixel 7 Pro Phone",
-    image: `${recordingBasePath}phone.png`,
-  },
+const cameraLinks: LinkListItem[] = [
   {
     title: "Video Camera",
     subtitle: "DJI Osmo Pocket 3",
     link: "https://amzn.to/3QTJv8n",
     alt: "DJI Osmo Pocket 3 Creator Combo",
-    image: `${recordingBasePath}video_cam.png`,
+    image: `${cameraBasePath}video_cam.png`,
+  },
+  {
+    title: "Phone",
+    link: "https://amzn.to/3umj7w2",
   },
 ];
 
-const desktopGearLinks: LinkListItem[] = [
+const officeFurnitureLinks: LinkListItem[] = [
   {
     title: "Grovemade Desk Shelf",
     subtitle: "10% OFF code: IMPACC10",
     link: "https://grovemade.com/desk-shelf-system?rfsn=7165896.d6eb21",
     alt: "Grovemade",
     image: "/affiliates/grovemade.png",
+  },
+  {
+    title: "Chair",
+    subtitle: "Steelcase Gesture",
+    link: "https://amzn.to/3ENwffM",
+    alt: "Steelcase Gesture Office Chair",
+  },
+  {
+    title: "Shelf",
+    subtitle: "6 Cube Storage Shelf",
+    link: "https://amzn.to/49IOEZh",
+  },
+  {
+    title: "Desk",
+    link: "https://vorii.com/collections/standing-desks-new/products/project-s-hardwood-standing-desk",
+  },
+];
+
+const desktopGearLinks: LinkListItem[] = [
+  {
+    title: "Monitor",
+    subtitle: 'Samsung 49" G93SC OLED',
+    link: "https://amzn.to/3uk71DR",
+    alt: 'SAMSUNG 49" Odyssey G93SC Series OLED LS49CG932SNXZA',
+    image: `${desktopBasePath}monitor.png`,
   },
   {
     title: "Mouse",
@@ -95,25 +111,11 @@ const desktopGearLinks: LinkListItem[] = [
     image: `${desktopBasePath}mouse.png`,
   },
   {
-    title: "Webcam",
-    subtitle: "Logitech Brio 4K",
-    link: "https://amzn.to/3PQf976",
-    alt: "Logitech Brio 4K Webcam",
-    image: `${desktopBasePath}webcam.png`,
-  },
-  {
     title: "Speakers",
     subtitle: "Audioengine HD3",
     link: "https://amzn.to/3RuGZY1",
     alt: "Audioengine HD3 Wireless Speakers with Bluetooth - 60W Powered Computer Speakers",
     image: `${desktopBasePath}speakers.png`,
-  },
-  {
-    title: "Monitor",
-    subtitle: 'Samsung 49" G93SC OLED',
-    link: "https://amzn.to/3uk71DR",
-    alt: 'SAMSUNG 49" Odyssey G93SC Series OLED LS49CG932SNXZA',
-    image: `${desktopBasePath}monitor.png`,
   },
   {
     title: "Microphone (VO + VC)",
@@ -130,11 +132,11 @@ const desktopGearLinks: LinkListItem[] = [
     image: `${desktopBasePath}mic_arm.png`,
   },
   {
-    title: "Chair",
-    subtitle: "Steelcase Gesture",
-    link: "https://amzn.to/3ENwffM",
-    alt: "Steelcase Gesture Office Chair",
-    image: `${desktopBasePath}chair.png`,
+    title: "Webcam",
+    subtitle: "Logitech Brio 4K",
+    link: "https://amzn.to/3PQf976",
+    alt: "Logitech Brio 4K Webcam",
+    image: `${desktopBasePath}webcam.png`,
   },
 ];
 
@@ -177,11 +179,8 @@ const everydayCarryLinks: LinkListItem[] = [
     image: `${edcBasePath}backpack.png`,
   },
   {
-    title: "Noise Cancelling Earbuds",
-    subtitle: "Sony WF-1000XM4",
+    title: "Earbuds",
     link: "https://amzn.to/40HQiGA",
-    alt: "Sony Noise Cancelling Earbuds",
-    image: `${edcBasePath}earbuds.png`,
   },
 ];
 
@@ -227,21 +226,30 @@ type GearProps = { style?: CSSProperties | undefined };
 const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
   return (
     <div style={props.style}>
-      <Space style={spaceStyle}>
-        This is the stuff I use. I try to keep this updated but if you don't see
-        what you're looking for, just ask!
+      <Space direction="vertical" size={2} style={spaceStyle}>
+        <Text>
+          This is the stuff I use. I try to keep this updated but if you don't
+          see what you're looking for, just ask!
+        </Text>
+        <Text>
+          *Some things belong to multiple categories so you may want to check
+          all the relevant ones.
+        </Text>
       </Space>
       <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
       <LinkList label="Desktop" items={desktopGearLinks} />
       <LinkList label="Lighting" items={lightingLinks} />
-      <LinkList label="Recording" items={recordingLinks} />
+      <LinkList label="Cameras" items={cameraLinks} />
       <LinkList label="Everyday Carry" items={everydayCarryLinks} />
+      <LinkList label="Office Furniture" items={officeFurnitureLinks} />
       <LinkList label="Skincare" items={skincareLinks} />
       <LinkList label="Hair" items={hairLinks} />
       <Space size={0} direction="vertical" style={spaceStyle}>
-        As an Amazon Associate I earn from qualifying purchases. I may earn a
-        commission at no cost to you, if you purchase item(s) through the
-        product links above.
+        <Text>
+          As an Amazon Associate I earn from qualifying purchases. I may earn a
+          commission at no cost to you, if you purchase item(s) through the
+          product links above.
+        </Text>
       </Space>
     </div>
   );
