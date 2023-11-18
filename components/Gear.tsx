@@ -215,10 +215,6 @@ const hairLinks: LinkListItem[] = [
     title: "Hair Spray",
     link: "https://amzn.to/48ilD62",
   },
-  // {
-  //   title: "Dry Shampoo",
-  //   link: "https://amzn.to/3PgwBjO",
-  // },
 ];
 
 type GearProps = { style?: CSSProperties | undefined };
