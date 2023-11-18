@@ -19,44 +19,44 @@ const spaceStyle: React.CSSProperties = {
 
 const keyboardLinks: LinkListItem[] = [
   {
-    title: "OTG Keyboard",
+    title: "Lofree Flow",
     subtitle: "10% OFF code: calvinxli",
     link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
     alt: "Lofree Flow",
     image: "/affiliates/lofree.png",
   },
   {
-    title: "Work Keyboard",
-    subtitle: "Keydous NJ80-AP",
+    title: "Keydous NJ80-AP",
+    subtitle: "work keyboard",
     link: "https://amzn.to/3Pz4PjR",
     alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
     image: `${keyboardsBasePath}work_keyboard.png`,
   },
   {
-    title: "Work Keycaps",
-    link: "https://amzn.to/3r8uJ4y",
-    subtitle: "Mint Theme",
-    alt: "Mint PBT XDA Keycaps",
-    image: `${keyboardsBasePath}work_keycaps.png`,
-  },
-  {
-    title: "Home Keyboard",
-    subtitle: "ASUS ROG Azoth 75%",
+    title: "ASUS ROG Azoth 75%",
+    subtitle: "home keyboard",
     link: "https://amzn.to/3Pxibx6",
     alt: "Home Keyboard - ASUS Rog Azoth 75%",
     image: `${keyboardsBasePath}home_keyboard.png`,
   },
   {
-    title: "Home Keycaps",
+    title: "Mint Theme Keycaps",
+    link: "https://amzn.to/3r8uJ4y",
+    subtitle: "on work keyboard",
+    alt: "Mint PBT XDA Keycaps",
+    image: `${keyboardsBasePath}work_keycaps.png`,
+  },
+  {
+    title: "EVA-01 Theme Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
-    subtitle: "EVA-01 Theme",
+    subtitle: "on home keyboard",
     alt: "EVA-01 PBT XDA Keycaps",
     image: `${keyboardsBasePath}home_keycaps.png`,
   },
   {
     title: "Spacebar Foam",
     link: "https://amzn.to/3sYP0tS",
-    subtitle: "finishing touch",
+    subtitle: "spacebar sound treatment",
     alt: "Spacebar Foam",
     image: `${keyboardsBasePath}spacebar_foam.png`,
   },
@@ -116,12 +116,6 @@ const desktopGearLinks: LinkListItem[] = [
     image: `${desktopBasePath}monitor.png`,
   },
   {
-    title: "Monitor Light Bar",
-    link: "https://amzn.to/49KnNvO",
-    alt: "ONWAY Curved Monitor Light Bar with Wireless Remote",
-    image: `${desktopBasePath}light_bar.png`,
-  },
-  {
     title: "Microphone (VO + VC)",
     subtitle: "Shure SM7B",
     link: "https://amzn.to/452AXkm",
@@ -145,6 +139,12 @@ const desktopGearLinks: LinkListItem[] = [
 ];
 
 const lightingLinks: LinkListItem[] = [
+  {
+    title: "Monitor Light Bar",
+    link: "https://amzn.to/49KnNvO",
+    alt: "ONWAY Curved Monitor Light Bar with Wireless Remote",
+    image: `${lightingBasePath}light_bar.png`,
+  },
   {
     title: "Wall Light",
     subtitle: "Govee Glide",
@@ -179,8 +179,8 @@ const everydayCarryLinks: LinkListItem[] = [
   {
     title: "Noise Cancelling Earbuds",
     subtitle: "Sony WF-1000XM4",
-    link: "https://amzn.to/3EKOJh2",
-    alt: "Noise Cancelling Earbuds",
+    link: "https://amzn.to/40HQiGA",
+    alt: "Sony Noise Cancelling Earbuds",
     image: `${edcBasePath}earbuds.png`,
   },
 ];
@@ -188,7 +188,6 @@ const everydayCarryLinks: LinkListItem[] = [
 const skincareLinks: LinkListItem[] = [
   {
     title: "Cleanser",
-    subtitle: "night only",
     link: "https://amzn.to/3F3gOAl",
     alt: "Puri Cleansing Wash, Facial Cleanser",
   },
@@ -233,9 +232,9 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
         what you're looking for, just ask!
       </Space>
       <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
-      <LinkList label="Recording" items={recordingLinks} />
       <LinkList label="Desktop" items={desktopGearLinks} />
       <LinkList label="Lighting" items={lightingLinks} />
+      <LinkList label="Recording" items={recordingLinks} />
       <LinkList label="Everyday Carry" items={everydayCarryLinks} />
       <LinkList label="Skincare" items={skincareLinks} />
       <LinkList label="Hair" items={hairLinks} />
