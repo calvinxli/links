@@ -58,6 +58,14 @@ const cameraLinks: LinkListItem[] = [
     title: "Phone",
     link: "https://amzn.to/3umj7w2",
   },
+  {
+    title: "Tripod",
+    link: "https://amzn.to/3sXH8Jr",
+  },
+  {
+    title: "Selfie Stick",
+    link: "https://amzn.to/3Gf15hZ",
+  },
 ];
 
 const officeFurnitureLinks: LinkListItem[] = [
