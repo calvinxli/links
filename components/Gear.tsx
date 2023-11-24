@@ -140,6 +140,57 @@ const desktopGearLinks: LinkListItem[] = [
   },
 ];
 
+const pcSpecsLinks: LinkListItem[] = [
+  {
+    title: "GPU",
+    subtitle: 'RX 7900 XTX',
+    link: "https://amzn.to/47sYPj2",
+    alt: 'Sapphire PULSE Radeon RX 7900 XTX 24 GB Video Card',
+  },
+  {
+    title: "CPU",
+    subtitle: 'i7-13700K',
+    link: "https://amzn.to/47MTeE5",
+    alt: 'Intel Core i7-13700K 3.4 GHz 16-Core Processor',
+  },
+  {
+    title: "CPU Cooler",
+    subtitle: 'Deepcool AK620',
+    link: "https://amzn.to/47GTKmU",
+    alt: 'Deepcool AK620 68.99 CFM CPU Cooler',
+  },
+  {
+    title: "RAM",
+    subtitle: '32GB DDR5-6000',
+    link: "https://amzn.to/40Q4hdi",
+    alt: 'G.Skill Trident Z5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL36 Memory',
+  },
+  {
+    title: "SSD",
+    subtitle: 'Sabrent Rocket 4.0 1TB',
+    link: "https://amzn.to/3GfaS7M",
+    alt: 'Sabrent Rocket 4.0 1 TB M.2-2280 PCIe 4.0 X4 NVME Solid State Drive',
+  },
+  {
+    title: "Motherboard",
+    subtitle: 'Z690 Phantom Gaming-ITX/TB4',
+    link: "https://amzn.to/3QQzNTX",
+    alt: 'ASRock Z690 Phantom Gaming-ITX/TB4 Mini ITX LGA1700 Motherboard',
+  },
+  {
+    title: "PSU",
+    subtitle: 'Corsair RM1000e',
+    link: "https://amzn.to/3uALiax",
+    alt: 'Corsair RM1000e (2022) 1000 W 80+ Gold Certified Fully Modular ATX Power Supply',
+  },
+  {
+    title: "Case",
+    subtitle: 'Torrent Nano',
+    link: "https://amzn.to/49Js0Ad",
+    alt: 'Fractal Design Torrent Nano RGB Mini ITX Tower Case',
+  },
+];
+
 const lightingLinks: LinkListItem[] = [
   {
     title: "Monitor Light Bar",
@@ -233,9 +284,10 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
         </Text>
       </Space>
       <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
-      <LinkList label="Desktop" items={desktopGearLinks} />
-      <LinkList label="Lighting" items={lightingLinks} />
       <LinkList label="Cameras" items={cameraLinks} />
+      <LinkList label="Desktop" items={desktopGearLinks} />
+      <LinkList label="PC Specs" items={pcSpecsLinks} />
+      <LinkList label="Lighting" items={lightingLinks} />
       <LinkList label="Everyday Carry" items={everydayCarryLinks} />
       <LinkList label="Office Furniture" items={officeFurnitureLinks} />
       <LinkList label="Skincare" items={skincareLinks} />
