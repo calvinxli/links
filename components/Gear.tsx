@@ -26,33 +26,23 @@ const keyboardLinks: LinkListItem[] = [
   },
   {
     title: "Keydous NJ80-AP",
-    subtitle: "work keyboard",
     link: "https://amzn.to/3Pz4PjR",
     alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
   },
   {
     title: "ASUS ROG Azoth 75%",
-    subtitle: "home keyboard",
     link: "https://amzn.to/3Pxibx6",
     alt: "ASUS ROG Azoth 75% Wireless DIY Custom Gaming Keyboard",
   },
   {
-    title: "Mint Theme Keycaps",
+    title: "Mint Keycaps",
     link: "https://amzn.to/3r8uJ4y",
-    subtitle: "on work keyboard",
     alt: "Mint PBT XDA Keycaps",
   },
   {
-    title: "EVA-01 Anime Theme Keycaps",
+    title: "EVA-01 Anime Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
-    subtitle: "on home keyboard",
     alt: "Evangelion EVA-01 PBT XDA Anime Keycaps",
-  },
-  {
-    title: "Spacebar Foam",
-    link: "https://amzn.to/3sYP0tS",
-    subtitle: "spacebar sound treatment",
-    alt: "Spacebar Foam",
   },
 ];
 
