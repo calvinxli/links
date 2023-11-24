@@ -261,6 +261,18 @@ const hairLinks: LinkListItem[] = [
 type GearProps = { style?: CSSProperties | undefined };
 
 const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
+  const links: LinkListProps[] = [
+    { label: KEYBOARDS_LABEL, items: keyboardLinks },
+    { label: 'Camera', items: cameraLinks },
+    { label: 'Desktop', items: desktopLinks },
+    { label: 'PC Specs', items: pcSpecsLinks },
+    { label: 'Lighting', items: lightingLinks },
+    { label: 'Everyday Carry', items: everydayCarryLinks },
+    { label: 'Office Furniture', items: officeFurnitureLinks },
+    { label: 'Skincare', items: skincareLinks },
+    { label: 'Hair', items: hairLinks },
+  ];
+  
   return (
     <div style={props.style}>
       <Space direction="vertical" size={2} style={spaceStyle}>
@@ -273,15 +285,9 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
           all the relevant ones.
         </Text>
       </Space>
-      <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
-      <LinkList label="Cameras" items={cameraLinks} />
-      <LinkList label="Desktop" items={desktopLinks} />
-      <LinkList label="PC Specs" items={pcSpecsLinks} />
-      <LinkList label="Lighting" items={lightingLinks} />
-      <LinkList label="Everyday Carry" items={everydayCarryLinks} />
-      <LinkList label="Office Furniture" items={officeFurnitureLinks} />
-      <LinkList label="Skincare" items={skincareLinks} />
-      <LinkList label="Hair" items={hairLinks} />
+      {links.map((link) => (
+        <LinkList key={link.label} label={link.label} items={link.items} />
+      ))}
       <Space size={0} direction="vertical" style={spaceStyle}>
         <Text>
           As an Amazon Associate I earn from qualifying purchases. I may earn a
