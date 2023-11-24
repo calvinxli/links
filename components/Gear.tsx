@@ -1,7 +1,7 @@
 "use client";
 import React, { CSSProperties } from "react";
 import { Space, Typography } from "antd";
-import LinkList, { LinkListItem } from "@/components/LinkList";
+import LinkList, { LinkListItem, LinkListProps } from "@/components/LinkList";
 const { Text } = Typography;
 export const KEYBOARDS_LABEL = "Keyboards";
 
