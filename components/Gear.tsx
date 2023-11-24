@@ -85,7 +85,7 @@ const officeFurnitureLinks: LinkListItem[] = [
   },
 ];
 
-const desktopGearLinks: LinkListItem[] = [
+const desktopLinks: LinkListItem[] = [
   {
     title: "Monitor",
     subtitle: 'Samsung 49" G93SC OLED',
@@ -157,9 +157,9 @@ const pcSpecsLinks: LinkListItem[] = [
   },
   {
     title: "SSD",
-    subtitle: 'Sabrent Rocket 4.0 1TB',
-    link: "https://amzn.to/3GfaS7M",
-    alt: 'Sabrent Rocket 4.0 1 TB M.2-2280 PCIe 4.0 X4 NVME Solid State Drive',
+    subtitle: 'SAMSUNG 990 PRO',
+    link: "https://amzn.to/40QXEaQ",
+    alt: 'SAMSUNG 990 PRO SSD 4TB PCIe 4.0 M.2 2280 Internal Solid State Hard Drive',
   },
   {
     title: "Motherboard",
@@ -275,7 +275,7 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
       </Space>
       <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
       <LinkList label="Cameras" items={cameraLinks} />
-      <LinkList label="Desktop" items={desktopGearLinks} />
+      <LinkList label="Desktop" items={desktopLinks} />
       <LinkList label="PC Specs" items={pcSpecsLinks} />
       <LinkList label="Lighting" items={lightingLinks} />
       <LinkList label="Everyday Carry" items={everydayCarryLinks} />
