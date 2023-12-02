@@ -66,7 +66,7 @@ const cameraLinks: LinkListItem[] = [
   },
   {
     title: "Phone",
-    link: "https://amzn.to/3umj7w2",
+    link: "https://amzn.to/3Td8C8V",
   },
 ];
 
