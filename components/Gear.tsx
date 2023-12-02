@@ -1,7 +1,7 @@
 "use client";
 import React, { CSSProperties } from "react";
 import { Space, Typography } from "antd";
-import LinkList, { LinkListItem } from "@/components/LinkList";
+import LinkList, { LinkListItem, LinkListProps } from "@/components/LinkList";
 const { Text } = Typography;
 export const KEYBOARDS_LABEL = "Keyboards";
 
@@ -26,33 +26,23 @@ const keyboardLinks: LinkListItem[] = [
   },
   {
     title: "Keydous NJ80-AP",
-    subtitle: "work keyboard",
     link: "https://amzn.to/3Pz4PjR",
     alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
   },
   {
     title: "ASUS ROG Azoth 75%",
-    subtitle: "home keyboard",
     link: "https://amzn.to/3Pxibx6",
     alt: "ASUS ROG Azoth 75% Wireless DIY Custom Gaming Keyboard",
   },
   {
-    title: "Mint Theme Keycaps",
+    title: "Mint Keycaps",
     link: "https://amzn.to/3r8uJ4y",
-    subtitle: "on work keyboard",
     alt: "Mint PBT XDA Keycaps",
   },
   {
-    title: "EVA-01 Anime Theme Keycaps",
+    title: "EVA-01 Anime Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
-    subtitle: "on home keyboard",
     alt: "Evangelion EVA-01 PBT XDA Anime Keycaps",
-  },
-  {
-    title: "Spacebar Foam",
-    link: "https://amzn.to/3sYP0tS",
-    subtitle: "spacebar sound treatment",
-    alt: "Spacebar Foam",
   },
 ];
 
@@ -67,6 +57,14 @@ const cameraLinks: LinkListItem[] = [
   {
     title: "Phone",
     link: "https://amzn.to/3Td8C8V",
+  },
+  {
+    title: "Tripod",
+    link: "https://amzn.to/3sXH8Jr",
+  },
+  {
+    title: "Selfie Stick",
+    link: "https://amzn.to/3Gf15hZ",
   },
 ];
 
@@ -95,7 +93,7 @@ const officeFurnitureLinks: LinkListItem[] = [
   },
 ];
 
-const desktopGearLinks: LinkListItem[] = [
+const desktopLinks: LinkListItem[] = [
   {
     title: "Monitor",
     subtitle: 'Samsung 49" G93SC OLED',
@@ -137,6 +135,57 @@ const desktopGearLinks: LinkListItem[] = [
     link: "https://amzn.to/3PQf976",
     alt: "Logitech Brio 4K Webcam",
     image: `${desktopBasePath}webcam.png`,
+  },
+];
+
+const pcSpecsLinks: LinkListItem[] = [
+  {
+    title: "GPU",
+    subtitle: 'RX 7900 XTX',
+    link: "https://amzn.to/47sYPj2",
+    alt: 'Sapphire PULSE Radeon RX 7900 XTX 24 GB Video Card',
+  },
+  {
+    title: "CPU",
+    subtitle: 'i7-13700K',
+    link: "https://amzn.to/47MTeE5",
+    alt: 'Intel Core i7-13700K 3.4 GHz 16-Core Processor',
+  },
+  {
+    title: "CPU Cooler",
+    subtitle: 'Deepcool AK620',
+    link: "https://amzn.to/47GTKmU",
+    alt: 'Deepcool AK620 68.99 CFM CPU Cooler',
+  },
+  {
+    title: "RAM",
+    subtitle: '32GB DDR5-6000',
+    link: "https://amzn.to/40Q4hdi",
+    alt: 'G.Skill Trident Z5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL36 Memory',
+  },
+  {
+    title: "SSD",
+    subtitle: 'SAMSUNG 990 PRO',
+    link: "https://amzn.to/40QXEaQ",
+    alt: 'SAMSUNG 990 PRO SSD 4TB PCIe 4.0 M.2 2280 Internal Solid State Hard Drive',
+  },
+  {
+    title: "Motherboard",
+    subtitle: 'Z690 Phantom Gaming-ITX/TB4',
+    link: "https://amzn.to/3QQzNTX",
+    alt: 'ASRock Z690 Phantom Gaming-ITX/TB4 Mini ITX LGA1700 Motherboard',
+  },
+  {
+    title: "PSU",
+    subtitle: 'Corsair RM1000e',
+    link: "https://amzn.to/3uALiax",
+    alt: 'Corsair RM1000e (2022) 1000 W 80+ Gold Certified Fully Modular ATX Power Supply',
+  },
+  {
+    title: "Case",
+    subtitle: 'Torrent Nano',
+    link: "https://amzn.to/49Js0Ad",
+    alt: 'Fractal Design Torrent Nano RGB Mini ITX Tower Case',
   },
 ];
 
@@ -220,6 +269,18 @@ const hairLinks: LinkListItem[] = [
 type GearProps = { style?: CSSProperties | undefined };
 
 const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
+  const links: LinkListProps[] = [
+    { label: KEYBOARDS_LABEL, items: keyboardLinks },
+    { label: 'Camera', items: cameraLinks },
+    { label: 'Desktop', items: desktopLinks },
+    { label: 'PC Specs', items: pcSpecsLinks },
+    { label: 'Lighting', items: lightingLinks },
+    { label: 'Everyday Carry', items: everydayCarryLinks },
+    { label: 'Office Furniture', items: officeFurnitureLinks },
+    { label: 'Skincare', items: skincareLinks },
+    { label: 'Hair', items: hairLinks },
+  ];
+  
   return (
     <div style={props.style}>
       <Space direction="vertical" size={2} style={spaceStyle}>
@@ -232,14 +293,9 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
           all the relevant ones.
         </Text>
       </Space>
-      <LinkList label={KEYBOARDS_LABEL} items={keyboardLinks} />
-      <LinkList label="Desktop" items={desktopGearLinks} />
-      <LinkList label="Lighting" items={lightingLinks} />
-      <LinkList label="Cameras" items={cameraLinks} />
-      <LinkList label="Everyday Carry" items={everydayCarryLinks} />
-      <LinkList label="Office Furniture" items={officeFurnitureLinks} />
-      <LinkList label="Skincare" items={skincareLinks} />
-      <LinkList label="Hair" items={hairLinks} />
+      {links.map((link) => (
+        <LinkList key={link.label} label={link.label} items={link.items} />
+      ))}
       <Space size={0} direction="vertical" style={spaceStyle}>
         <Text>
           As an Amazon Associate I earn from qualifying purchases. I may earn a

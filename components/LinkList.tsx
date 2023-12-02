@@ -28,7 +28,7 @@ export type LinkListItem = {
   alt?: string;
 };
 
-type LinkListProps = {
+export type LinkListProps = {
   label: string;
   items: LinkListItem[];
   commisionsEarned?: boolean;
