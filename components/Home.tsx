@@ -20,25 +20,11 @@ const affilateLinks: LinkListItem[] = [
     image: `${basePath}springboard.png`,
   },
   {
-    title: "Lofree | Aesthetic Keyboards/Accessories",
-    subtitle: "10% OFF code: calvinxli",
+    title: "YesStyle",
+    subtitle: "Code: CALVIN10",
     link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
     alt: "Lofree",
     image: `${basePath}lofree.png`,
-  },
-  {
-    title: "Grovemade Desk Shelf",
-    subtitle: "10% OFF code: IMPACC10",
-    link: "https://grovemade.com/desk-shelf-system?rfsn=7165896.d6eb21",
-    alt: "Grovemade",
-    image: `${basePath}grovemade.png`,
-  },
-  {
-    title: "Graphene-X Clothing",
-    subtitle: "10% OFF code: IMPACC",
-    link: "https://www.graphene-x.com/products/jogger-x-pants?rfsn=7014375.01f8a11",
-    alt: "Graphene-X, graphene-integrated clothing",
-    image: `${basePath}graphene-x.png`,
   },
   {
     title: "Gruns Nutrition",
@@ -70,9 +56,9 @@ class Home extends React.Component<HomeProps> {
           >
             Latest Vlog
           </Title>
-        </Row>
+        </Row>{" "}
         <Row justify="center" align="middle" style={{ marginBottom: 16 }}>
-          <LiteYouTubeEmbed id="GB7lIbyJe_I" title="Latest Vlog" />
+          <LiteYouTubeEmbed id="D8R3CX0WqrQ" title="Latest Vlog" />
         </Row>
         <Row justify="center" align="middle">
           <Typography.Text style={{ textAlign: "center" }}>
