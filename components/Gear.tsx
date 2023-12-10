@@ -197,6 +197,11 @@ const lightingLinks: LinkListItem[] = [
     image: `${lightingBasePath}light_bar.png`,
   },
   {
+    title: "Monitor Key Light",
+    link: "https://amzn.to/41fJ38Y",
+    alt: "Logitech for Creators Litra Glow Premium LED Streaming Light"
+  }
+  {
     title: "Wall Light",
     subtitle: "Govee Glide",
     link: "https://amzn.to/454xlhR",
