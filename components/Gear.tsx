@@ -1,7 +1,7 @@
 "use client";
-import React, { CSSProperties } from "react";
-import { Space, Typography } from "antd";
 import LinkList, { LinkListItem, LinkListProps } from "@/components/LinkList";
+import { Space, Typography } from "antd";
+import React, { CSSProperties } from "react";
 const { Text } = Typography;
 export const KEYBOARDS_LABEL = "Keyboards";
 
@@ -141,9 +141,9 @@ const desktopLinks: LinkListItem[] = [
 const pcSpecsLinks: LinkListItem[] = [
   {
     title: "GPU",
-    subtitle: "RX 7900 XTX",
-    link: "https://amzn.to/47sYPj2",
-    alt: "Sapphire PULSE Radeon RX 7900 XTX 24 GB Video Card",
+    subtitle: "RTX 4080 SUPER",
+    link: "https://amzn.to/3uhi1lM",
+    alt: "MSI Gaming RTX 4080 Super 16G Ventus 3X OC",
   },
   {
     title: "CPU",
