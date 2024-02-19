@@ -1,8 +1,8 @@
 "use client";
-import React, { CSSProperties } from "react";
-import { Typography, Row } from "antd";
-import LinkList, { LinkListItem } from "@/components/LinkList";
 import Bio from "@/components/Bio";
+import LinkList, { LinkListItem } from "@/components/LinkList";
+import { Row, Typography } from "antd";
+import React, { CSSProperties } from "react";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 
 const { Title } = Typography;
@@ -58,7 +58,7 @@ class Home extends React.Component<HomeProps> {
           </Title>
         </Row>{" "}
         <Row justify="center" align="middle" style={{ marginBottom: 16 }}>
-          <LiteYouTubeEmbed id="XbCYyGzHDIA" title="Latest Vlog" />
+          <LiteYouTubeEmbed id="LLLie2VL-Co" title="Latest Vlog" />
         </Row>
         <Row justify="center" align="middle">
           <Typography.Text style={{ textAlign: "center" }}>
