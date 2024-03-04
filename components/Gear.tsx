@@ -48,15 +48,29 @@ const keyboardLinks: LinkListItem[] = [
 
 const cameraLinks: LinkListItem[] = [
   {
-    title: "Video Camera",
+    title: "Camera 1",
     subtitle: "DJI Osmo Pocket 3",
     link: "https://amzn.to/3QTJv8n",
     alt: "DJI Osmo Pocket 3 Creator Combo",
-    image: `${cameraBasePath}video_cam.png`,
+    image: `${cameraBasePath}dji.png`,
   },
   {
-    title: "Phone",
+    title: "Camera 2",
+    subtitle: "Sony ZV-E10",
+    link: "https://amzn.to/433Tbm9",
+    alt: "Sony Alpha ZV-E10 - APS-C Interchangeable Lens Mirrorless Vlog Camera",
+    image: `${cameraBasePath}sony.png`,
+  },
+  {
+    title: "Camera 3",
+    subtitle: "Google Pixel 8 Pro",
     link: "https://amzn.to/3Td8C8V",
+  },
+  {
+    title: "Camera Lens",
+    subtitle: "Sigma 16mm f/1.4",
+    link: "https://amzn.to/3SZU9LC",
+    alt: "Sigma 16mm f/1.4 DC DN Contemporary Lens for Sony E",
   },
   {
     title: "Tripod",
@@ -282,7 +296,7 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
     { label: "Lighting", items: lightingLinks },
     { label: "Everyday Carry", items: everydayCarryLinks },
     { label: "Office Furniture", items: officeFurnitureLinks },
-    { label: "Skincare", items: skincareLinks },
+    // { label: "Skincare", items: skincareLinks },
     { label: "Hair", items: hairLinks },
   ];
 
