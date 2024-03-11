@@ -22,16 +22,14 @@ const affilateLinks: LinkListItem[] = [
   {
     title: "YesStyle",
     subtitle: "Code: CALVIN10",
-    link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
-    alt: "Lofree",
-    image: `${basePath}lofree.png`,
+    link: "https://www.yesstyle.com/en/home.html?rco=CALVIN10&utm_term=CALVIN10&utm_medium=Influencer&utm_source=dynamic&mcg=influencer",
   },
-  {
-    title: "Gruns Nutrition",
-    subtitle: "20% OFF w/ this link",
-    link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
-    image: `${basePath}gruns.png`,
-  },
+  // {
+  //   title: "Gruns Nutrition",
+  //   subtitle: "20% OFF w/ this link",
+  //   link: "https://www.gruns.co/pages/vip?snowball=CALVIN05232",
+  //   image: `${basePath}gruns.png`,
+  // },
 ];
 
 class Home extends React.Component<HomeProps> {
