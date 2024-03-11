@@ -5,7 +5,7 @@ import type { TabsProps } from "antd";
 import { ConfigProvider, Space, Tabs, Typography, theme } from "antd";
 import { CSSProperties } from "react";
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Paragraph } = Typography;
 
 const sidePadding = 20;
 const sidePaddingStyle: CSSProperties = {
@@ -13,7 +13,7 @@ const sidePaddingStyle: CSSProperties = {
   paddingRight: sidePadding,
 };
 
-export const spaceStyle: React.CSSProperties = {
+const spaceStyle: React.CSSProperties = {
   textAlign: "center",
   marginBottom: 16,
   fontSize: 12,

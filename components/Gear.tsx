@@ -1,10 +1,16 @@
 "use client";
-import { spaceStyle } from "@/app/page";
 import LinkList, { LinkListItem, LinkListProps } from "@/components/LinkList";
 import { Space, Typography } from "antd";
 import React, { CSSProperties } from "react";
 
 const { Text } = Typography;
+
+// same as  page.tsx
+const spaceStyle: React.CSSProperties = {
+  textAlign: "center",
+  marginBottom: 16,
+  fontSize: 12,
+};
 
 const keyboardsLabel = "Keyboards";
 
