@@ -1,28 +1,58 @@
 "use client";
-import React, { CSSProperties } from "react";
-import Home from "@/components/Home";
-import { Tabs, ConfigProvider, Typography, theme, Row } from "antd";
-import type { TabsProps } from "antd";
 import Gear from "@/components/Gear";
+import Home from "@/components/Home";
+import type { TabsProps } from "antd";
+import { ConfigProvider, Space, Tabs, Typography, theme } from "antd";
+import { CSSProperties } from "react";
 
-const { Title } = Typography;
+const { Title, Text, Paragraph } = Typography;
 
-const sidePadding = "20px";
-const childrenStyle: CSSProperties = {
+const sidePadding = 20;
+const sidePaddingStyle: CSSProperties = {
   paddingLeft: sidePadding,
   paddingRight: sidePadding,
 };
+
+export const spaceStyle: React.CSSProperties = {
+  textAlign: "center",
+  marginBottom: 16,
+  fontSize: 12,
+};
+
+const footer = (
+  <Space size={0} direction="vertical" style={spaceStyle}>
+    <Paragraph>
+      This website is built and maintained by me! Please let me know if you
+      discover a bug.
+    </Paragraph>
+    <Paragraph>
+      As an Amazon Associate I earn from qualifying purchases. I may earn a
+      commission at no cost to you, if make purchases through links on this
+      website.
+    </Paragraph>
+  </Space>
+);
 
 const items: TabsProps["items"] = [
   {
     key: "home",
     label: "Home",
-    children: <Home style={childrenStyle} />,
+    children: (
+      <>
+        <Home style={sidePaddingStyle} />
+        {footer}
+      </>
+    ),
   },
   {
     key: "gear",
     label: "Gear",
-    children: <Gear style={childrenStyle} />,
+    children: (
+      <>
+        <Gear style={sidePaddingStyle} />
+        {footer}
+      </>
+    ),
   },
 ];
 
@@ -44,7 +74,7 @@ const HomePage = () => (
     }}
   >
     <Tabs
-      tabBarStyle={childrenStyle}
+      tabBarStyle={{ ...sidePaddingStyle, fontWeight: "bold" }}
       defaultActiveKey={items[0].key}
       tabBarExtraContent={
         <Title level={3} aria-label="Calvin Li">

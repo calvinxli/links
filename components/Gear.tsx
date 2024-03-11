@@ -1,20 +1,17 @@
 "use client";
+import { spaceStyle } from "@/app/page";
 import LinkList, { LinkListItem, LinkListProps } from "@/components/LinkList";
 import { Space, Typography } from "antd";
 import React, { CSSProperties } from "react";
+
 const { Text } = Typography;
-export const KEYBOARDS_LABEL = "Keyboards";
+
+const keyboardsLabel = "Keyboards";
 
 const cameraBasePath = "/camera/";
 const desktopBasePath = "/desktop/";
 const lightingBasePath = "/lighting/";
 const edcBasePath = "/edc/";
-
-const spaceStyle: React.CSSProperties = {
-  textAlign: "center",
-  marginBottom: 16,
-  fontSize: 12,
-};
 
 const keyboardLinks: LinkListItem[] = [
   {
@@ -289,15 +286,19 @@ type GearProps = { style?: CSSProperties | undefined };
 
 const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
   const links: LinkListProps[] = [
-    { label: KEYBOARDS_LABEL, items: keyboardLinks },
+    {
+      label: keyboardsLabel,
+      items: keyboardLinks,
+      defaultActiveKey: keyboardsLabel,
+    },
     { label: "Camera", items: cameraLinks },
     { label: "Desktop", items: desktopLinks },
     { label: "PC Specs", items: pcSpecsLinks },
     { label: "Lighting", items: lightingLinks },
     { label: "Everyday Carry", items: everydayCarryLinks },
     { label: "Office Furniture", items: officeFurnitureLinks },
+    // { label: "Hair", items: hairLinks },
     // { label: "Skincare", items: skincareLinks },
-    { label: "Hair", items: hairLinks },
   ];
 
   return (
@@ -313,15 +314,13 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
         </Text>
       </Space>
       {links.map((link) => (
-        <LinkList key={link.label} label={link.label} items={link.items} />
+        <LinkList
+          key={link.label}
+          label={link.label}
+          items={link.items}
+          defaultActiveKey={link.defaultActiveKey}
+        />
       ))}
-      <Space size={0} direction="vertical" style={spaceStyle}>
-        <Text>
-          As an Amazon Associate I earn from qualifying purchases. I may earn a
-          commission at no cost to you, if you purchase item(s) through the
-          product links above.
-        </Text>
-      </Space>
     </div>
   );
 };

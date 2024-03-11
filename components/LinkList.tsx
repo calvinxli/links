@@ -1,16 +1,15 @@
 "use client";
 import {
-  Typography,
   Button,
-  Collapse,
-  Space,
-  Image,
   Col,
+  Collapse,
+  Image,
   Row,
+  Space,
+  Typography,
   theme,
 } from "antd";
 import React, { ReactNode } from "react";
-import { KEYBOARDS_LABEL } from "./Gear";
 
 const { Text } = Typography;
 
@@ -31,14 +30,8 @@ export type LinkListItem = {
 export type LinkListProps = {
   label: string;
   items: LinkListItem[];
-  commisionsEarned?: boolean;
+  defaultActiveKey?: string | undefined;
 };
-
-function renderCommisionsEarned(show: boolean | undefined): ReactNode {
-  return (
-    show && <Text style={{ fontWeight: "lighter" }}>#CommissionsEarned</Text>
-  );
-}
 
 function renderLinks(items: LinkListItem[]): ReactNode {
   return items.map((item: LinkListItem) => (
@@ -133,9 +126,7 @@ const LinkList: React.FunctionComponent<LinkListProps> = (
   return (
     <Collapse
       bordered={false}
-      defaultActiveKey={
-        props.label === KEYBOARDS_LABEL ? KEYBOARDS_LABEL : undefined
-      }
+      defaultActiveKey={props.defaultActiveKey}
       style={{
         fontWeight: "bold",
         fontSize: COLLAPSE_HEADER_FONT_SIZE,
@@ -147,12 +138,7 @@ const LinkList: React.FunctionComponent<LinkListProps> = (
           key: props.label,
           label: props.label,
           extra: renderHeaderOffset(),
-          children: (
-            <>
-              {renderCommisionsEarned(props.commisionsEarned)}
-              {renderLinks(props.items)}
-            </>
-          ),
+          children: <>{renderLinks(props.items)}</>,
           style: panelStyle,
         },
       ]}
