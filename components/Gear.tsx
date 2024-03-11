@@ -39,13 +39,11 @@ const keyboardLinks: LinkListItem[] = [
   },
   {
     title: "Keydous NJ80-AP",
-    subtitle: "retired",
     link: "https://amzn.to/3Pz4PjR",
     alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
   },
   {
     title: "Mint Keycaps",
-    subtitle: "retired",
     link: "https://amzn.to/3r8uJ4y",
     alt: "Mint PBT XDA Keycaps",
   },
