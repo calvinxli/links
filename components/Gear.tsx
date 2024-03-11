@@ -22,24 +22,26 @@ const keyboardLinks: LinkListItem[] = [
     image: "/affiliates/lofree.png",
   },
   {
-    title: "Keydous NJ80-AP",
-    link: "https://amzn.to/3Pz4PjR",
-    alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
-  },
-  {
     title: "ASUS ROG Azoth 75%",
     link: "https://amzn.to/3Pxibx6",
     alt: "ASUS ROG Azoth 75% Wireless DIY Custom Gaming Keyboard",
   },
   {
-    title: "Mint Keycaps",
-    link: "https://amzn.to/3r8uJ4y",
-    alt: "Mint PBT XDA Keycaps",
-  },
-  {
     title: "EVA-01 Anime Keycaps",
     link: "https://s.click.aliexpress.com/e/_Dn3qOE3",
     alt: "Evangelion EVA-01 PBT XDA Anime Keycaps",
+  },
+  {
+    title: "Keydous NJ80-AP",
+    subtitle: "retired",
+    link: "https://amzn.to/3Pz4PjR",
+    alt: "keydous nj80-ap, brass plate, gateron pro brown switches",
+  },
+  {
+    title: "Mint Keycaps",
+    subtitle: "retired",
+    link: "https://amzn.to/3r8uJ4y",
+    alt: "Mint PBT XDA Keycaps",
   },
 ];
 
