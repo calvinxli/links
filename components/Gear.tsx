@@ -1,16 +1,11 @@
 "use client";
 import LinkList, { LinkListItem, LinkListProps } from "@/components/LinkList";
 import { Space, Typography } from "antd";
-import React, { CSSProperties } from "react";
+import React from "react";
+import { spaceStyle } from "./Constants";
+import { LinkTabProps } from "./Props";
 
 const { Text } = Typography;
-
-// same as  page.tsx
-const spaceStyle: React.CSSProperties = {
-  textAlign: "center",
-  marginBottom: 16,
-  fontSize: 12,
-};
 
 const keyboardsLabel = "Keyboards";
 
@@ -112,46 +107,53 @@ const officeFurnitureLinks: LinkListItem[] = [
 
 const desktopLinks: LinkListItem[] = [
   {
+    title: "Magnetic Cables",
+    link: "https://magtame.com/?ref=calvinxli",
+    subtitle: "15% OFF CODE: calvinxli",
+    alt: "O-Magcable USB C to USB C Cable, 20 Gbps Data Transfer Compatible with Thunderbolt Protocol",
+    image: `${desktopBasePath}magtame.png`,
+  },
+  {
+    title: "Thunderbolt 4 Dock",
+    subtitle: "for my work laptop",
+    alt: "Anker PowerExpand 5-in-1 Thunderbolt 4 Mini Dock",
+    link: "https://amzn.to/3TIdvX2",
+  },
+  {
     title: "Monitor",
     subtitle: 'Samsung 49" G93SC OLED',
     link: "https://amzn.to/3uk71DR",
     alt: 'SAMSUNG 49" Odyssey G93SC Series OLED LS49CG932SNXZA',
-    image: `${desktopBasePath}monitor.png`,
   },
   {
     title: "Mouse",
     subtitle: "Logitech G604",
     link: "https://amzn.to/3PPN4gl",
     alt: "Logitech G604 LIGHTSPEED Gaming Mouse",
-    image: `${desktopBasePath}mouse.png`,
   },
   {
     title: "Speakers",
     subtitle: "Audioengine HD3",
     link: "https://amzn.to/3RuGZY1",
     alt: "Audioengine HD3 Wireless Speakers with Bluetooth - 60W Powered Computer Speakers",
-    image: `${desktopBasePath}speakers.png`,
   },
   {
     title: "Microphone (VO + VC)",
     subtitle: "Shure SM7B",
     link: "https://amzn.to/452AXkm",
     alt: "Shure SM7B Dynamic Microphone",
-    image: `${desktopBasePath}microphone.png`,
   },
   {
     title: "Microphone Arm",
     subtitle: "Elgato Wave Mic Arm LP",
     link: "https://amzn.to/44YhAch",
     alt: "Elgato Wave Mic Arm LP",
-    image: `${desktopBasePath}mic_arm.png`,
   },
   {
     title: "Webcam",
     subtitle: "Logitech Brio 4K",
     link: "https://amzn.to/3PQf976",
     alt: "Logitech Brio 4K Webcam",
-    image: `${desktopBasePath}webcam.png`,
   },
 ];
 
@@ -255,42 +257,7 @@ const everydayCarryLinks: LinkListItem[] = [
   },
 ];
 
-const skincareLinks: LinkListItem[] = [
-  {
-    title: "Cleanser",
-    link: "https://amzn.to/3F3gOAl",
-    alt: "Puri Cleansing Wash, Facial Cleanser",
-  },
-  {
-    title: "Moisturizer",
-    link: "https://amzn.to/46e9vRN",
-    alt: "Summer Fridays Cloud Dew Gel Cream",
-  },
-  {
-    title: "Sunscreen",
-    link: "https://amzn.to/46fVuTx",
-    alt: "AHC Natural Perfection Double Shield Sun Stick",
-  },
-];
-
-const hairLinks: LinkListItem[] = [
-  {
-    title: "Styling Iron",
-    link: "https://amzn.to/3PrHZt8",
-  },
-  {
-    title: "Heat Protectant",
-    link: "https://amzn.to/3MEXHjU",
-  },
-  {
-    title: "Hair Spray",
-    link: "https://amzn.to/48ilD62",
-  },
-];
-
-type GearProps = { style?: CSSProperties | undefined };
-
-const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
+const Gear: React.FunctionComponent<LinkTabProps> = (props: LinkTabProps) => {
   const links: LinkListProps[] = [
     {
       label: keyboardsLabel,
@@ -299,12 +266,10 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
     },
     { label: "Camera", items: cameraLinks },
     { label: "Desktop", items: desktopLinks },
-    { label: "PC Specs", items: pcSpecsLinks },
     { label: "Lighting", items: lightingLinks },
     { label: "Everyday Carry", items: everydayCarryLinks },
     { label: "Office Furniture", items: officeFurnitureLinks },
-    // { label: "Hair", items: hairLinks },
-    // { label: "Skincare", items: skincareLinks },
+    { label: "PC Specs", items: pcSpecsLinks },
   ];
 
   return (
@@ -313,10 +278,6 @@ const Gear: React.FunctionComponent<GearProps> = (props: GearProps) => {
         <Text>
           This is the stuff I use. I try to keep this updated but if you don't
           see what you're looking for, just ask!
-        </Text>
-        <Text>
-          *Some things belong to multiple categories so you may want to check
-          all the relevant ones.
         </Text>
       </Space>
       {links.map((link) => (

@@ -1,4 +1,5 @@
 "use client";
+import { spaceStyle } from "@/components/Constants";
 import Gear from "@/components/Gear";
 import Home from "@/components/Home";
 import type { TabsProps } from "antd";
@@ -11,12 +12,6 @@ const sidePadding = 20;
 const sidePaddingStyle: CSSProperties = {
   paddingLeft: sidePadding,
   paddingRight: sidePadding,
-};
-
-const spaceStyle: React.CSSProperties = {
-  textAlign: "center",
-  marginBottom: 16,
-  fontSize: 12,
 };
 
 const footer = (
