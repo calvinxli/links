@@ -1,10 +1,10 @@
-import React from "react";
+import "@/app/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import StyledComponentsRegistry from "../lib/AntdRegistry";
-import "@/app/globals.css";
-import Script from "next/script";
 import Head from "next/head";
+import Script from "next/script";
+import React from "react";
+import StyledComponentsRegistry from "../lib/AntdRegistry";
 
 const inter = Inter({ subsets: ["latin"] });
 const author = "Calvin Li";
@@ -24,6 +24,24 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <Head>
       <link rel="canonical" href="https://www.calvinxli.com" key="canonical" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
     </Head>
     <Script src="https://www.googletagmanager.com/gtag/js?id=G-TEL22919JK" />
     <Script id="google-analytics">
