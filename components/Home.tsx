@@ -58,7 +58,7 @@ class Home extends React.Component<HomeProps> {
           </Title>
         </Row>{" "}
         <Row justify="center" align="middle" style={{ marginBottom: 16 }}>
-          <LiteYouTubeEmbed id="VHjJ0C2BPbk" title="Latest Vlog" />
+          <LiteYouTubeEmbed id="0xjTMh78tmI" title="Latest Vlog" />
         </Row>
       </div>
     );

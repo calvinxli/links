@@ -18,7 +18,7 @@ const keyboardLinks: LinkListItem[] = [
   {
     title: "Lofree Flow",
     subtitle: "10% OFF code: calvinxli",
-    link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?variant=44226590736603&aff=211",
+    link: "https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard?ref=calvinxli",
     alt: "Lofree Flow",
     image: "/affiliates/lofree.png",
   },
